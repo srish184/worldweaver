@@ -32,9 +32,25 @@ namespace WorldWeaver
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_mapFilePicker_Click_1(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpeg;*.jpg;*.png;*.gif";
+            openFileDialog.Title = "Select an Image File";
 
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Get the selected file path
+                string filePath = openFileDialog.FileName;
+
+                // Load the selected image into the PictureBox
+                Image selectedImage = Image.FromFile(filePath);
+
+                // Resize the image to fit within the PictureBox
+                img_uploadPreview.SizeMode = PictureBoxSizeMode.StretchImage;
+                img_uploadPreview.Image = selectedImage;
+            }
         }
+
     }
 }

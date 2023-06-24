@@ -1,0 +1,11 @@
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\bin\Debug\WorldWeaver.exe.config
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\bin\Debug\WorldWeaver.exe
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\bin\Debug\WorldWeaver.pdb
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.AssemblyReference.cache
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.SuggestedBindingRedirects.cache
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.Form1.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.Properties.Resources.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.GenerateResource.cache
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.CoreCompileInputs.cache
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.exe
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.pdb
