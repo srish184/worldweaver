@@ -34,6 +34,7 @@
             this.lbl_mapFilePicker = new System.Windows.Forms.Label();
             this.img_uploadPreview = new System.Windows.Forms.PictureBox();
             this.txtbx_uploadStatus = new System.Windows.Forms.RichTextBox();
+            this.btn_submit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_uploadPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +94,22 @@
             this.txtbx_uploadStatus.TabIndex = 6;
             this.txtbx_uploadStatus.Text = "";
             // 
+            // btn_submit
+            // 
+            this.btn_submit.Location = new System.Drawing.Point(211, 363);
+            this.btn_submit.Name = "btn_submit";
+            this.btn_submit.Size = new System.Drawing.Size(150, 38);
+            this.btn_submit.TabIndex = 7;
+            this.btn_submit.Text = "SUBMIT";
+            this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.txtbx_uploadStatus);
             this.Controls.Add(this.img_uploadPreview);
             this.Controls.Add(this.btn_mapFilePicker);
@@ -121,6 +133,7 @@
         private System.Windows.Forms.Label lbl_mapFilePicker;
         private System.Windows.Forms.PictureBox img_uploadPreview;
         private System.Windows.Forms.RichTextBox txtbx_uploadStatus;
+        private System.Windows.Forms.Button btn_submit;
     }
 }
 
