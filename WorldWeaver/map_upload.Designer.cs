@@ -35,7 +35,9 @@
             this.img_uploadPreview = new System.Windows.Forms.PictureBox();
             this.txtbx_uploadStatus = new System.Windows.Forms.RichTextBox();
             this.btn_submit = new System.Windows.Forms.Button();
+            this.picLoading = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.img_uploadPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoading)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_mapName
@@ -104,11 +106,21 @@
             this.btn_submit.UseVisualStyleBackColor = true;
             this.btn_submit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // picLoading
+            // 
+            this.picLoading.Image = global::WorldWeaver.Properties.Resources.waiting;
+            this.picLoading.Location = new System.Drawing.Point(211, 256);
+            this.picLoading.Name = "picLoading";
+            this.picLoading.Size = new System.Drawing.Size(150, 101);
+            this.picLoading.TabIndex = 8;
+            this.picLoading.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.picLoading);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.txtbx_uploadStatus);
             this.Controls.Add(this.img_uploadPreview);
@@ -120,6 +132,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_uploadPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLoading)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +147,7 @@
         private System.Windows.Forms.PictureBox img_uploadPreview;
         private System.Windows.Forms.RichTextBox txtbx_uploadStatus;
         private System.Windows.Forms.Button btn_submit;
+        private System.Windows.Forms.PictureBox picLoading;
     }
 }
 

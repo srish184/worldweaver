@@ -2,10 +2,16 @@
 ############# Use this file to post the SQL you use to create your tables ###############
 #########################################################################################
 
+
+*********************************************
 table name: maps
 
-CREATE TABLE Maps (
-    map_id INT PRIMARY KEY,
-    Map_Name NVARCHAR(255),
-    relative_file_path NVARCHAR(255)
-)
+CREATE TABLE maps
+(
+    map_id INT IDENTITY(1,1) PRIMARY KEY,
+    map_name NVARCHAR(100),
+    map_file_path NVARCHAR(255)
+);
+
+
+*********************************************

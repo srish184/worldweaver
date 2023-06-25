@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient; 
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace WorldWeaver
 {
@@ -18,7 +20,10 @@ namespace WorldWeaver
         public Form1()
         {
             InitializeComponent();
-            
+
+            // Disable the submit button by default.
+            // The button is enabled only when an image file is selected and a map name is entered.
+            btn_submit.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,8 +33,9 @@ namespace WorldWeaver
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+           
         }
+
 
         private void lbl_mapFilePicker_Click(object sender, EventArgs e)
         {
@@ -57,6 +63,12 @@ namespace WorldWeaver
                     // Resize the image to fit within the PictureBox
                     img_uploadPreview.SizeMode = PictureBoxSizeMode.StretchImage;
                     img_uploadPreview.Image = selectedImage;
+
+                    // Enable the submit button if a map name has been entered
+                    if (!string.IsNullOrEmpty(txt_mapName.Text))
+                    {
+                        btn_submit.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -65,12 +77,25 @@ namespace WorldWeaver
             }
         }
 
+        // Add a TextChanged event handler for txt_mapName
+        private void txt_mapName_TextChanged(object sender, EventArgs e)
+        {
+            // Enable the submit button if an image file has been selected
+            if (img_uploadPreview.Image != null && !string.IsNullOrEmpty(txt_mapName.Text))
+            {
+                btn_submit.Enabled = true;
+            }
+            else
+            {
+                btn_submit.Enabled = false;
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (img_uploadPreview.Image == null)
+            if (img_uploadPreview.Image == null || string.IsNullOrEmpty(txt_mapName.Text))
             {
-                MessageBox.Show("No image selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Both a map name and an image must be selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -89,14 +114,12 @@ namespace WorldWeaver
                 // Build the destination path for the image
                 string destinationPath = Path.Combine(subfolderPath, fileName);
 
-                // Show the destination path
-                MessageBox.Show($"Destination Path: {destinationPath}", "Destination Path", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 // Copy the image file to the destination path
                 File.Copy(selectedFilePath, destinationPath, true);
 
-                // Optionally, store the destinationPath in the database for later retrieval
-                // ...
+                // Store the map name and destination path in the database
+                string mapName = txt_mapName.Text;
+                SaveMapToDatabase(mapName, destinationPath);
 
                 MessageBox.Show("Image saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -106,5 +129,23 @@ namespace WorldWeaver
             }
         }
 
+        // Save map information to database
+        private void SaveMapToDatabase(string mapName, string destinationPath)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("INSERT INTO maps (map_name, map_file_path) VALUES (@mapName, @filePath)", connection))
+                {
+                    command.Parameters.AddWithValue("@mapName", mapName);
+                    command.Parameters.AddWithValue("@filePath", destinationPath);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

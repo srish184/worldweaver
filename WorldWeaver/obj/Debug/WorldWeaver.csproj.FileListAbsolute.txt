@@ -9,3 +9,6 @@ C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.csproj
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.CoreCompileInputs.cache
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.exe
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.pdb
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.CopyComplete
