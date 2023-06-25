@@ -333,4 +333,4 @@ healthchecksdb
 MigrationBackup/
 
 # Config file
-# App.config
+App.config

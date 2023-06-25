@@ -1,0 +1,11 @@
+#########################################################################################
+############# Use this file to post the SQL you use to create your tables ###############
+#########################################################################################
+
+table name: maps
+
+CREATE TABLE Maps (
+    map_id INT PRIMARY KEY,
+    Map_Name NVARCHAR(255),
+    relative_file_path NVARCHAR(255)
+)
