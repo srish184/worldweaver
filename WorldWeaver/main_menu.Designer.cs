@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.btn_mapUpload = new System.Windows.Forms.Button();
+            this.btnLoadGame = new System.Windows.Forms.Button();
+            this.BtnNewGame = new System.Windows.Forms.Button();
+            this.lblintro = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_mapUpload
             // 
-            this.btn_mapUpload.Location = new System.Drawing.Point(62, 68);
+            this.btn_mapUpload.Location = new System.Drawing.Point(549, 169);
             this.btn_mapUpload.Name = "btn_mapUpload";
             this.btn_mapUpload.Size = new System.Drawing.Size(131, 50);
             this.btn_mapUpload.TabIndex = 0;
@@ -41,20 +44,58 @@
             this.btn_mapUpload.UseVisualStyleBackColor = true;
             this.btn_mapUpload.Click += new System.EventHandler(this.btn_mapUpload_Click);
             // 
+            // btnLoadGame
+            // 
+            this.btnLoadGame.Location = new System.Drawing.Point(108, 169);
+            this.btnLoadGame.Name = "btnLoadGame";
+            this.btnLoadGame.Size = new System.Drawing.Size(131, 50);
+            this.btnLoadGame.TabIndex = 1;
+            this.btnLoadGame.Text = "Load Campaign ";
+            this.btnLoadGame.UseVisualStyleBackColor = true;
+            // 
+            // BtnNewGame
+            // 
+            this.BtnNewGame.Location = new System.Drawing.Point(333, 169);
+            this.BtnNewGame.Name = "BtnNewGame";
+            this.BtnNewGame.Size = new System.Drawing.Size(131, 50);
+            this.BtnNewGame.TabIndex = 2;
+            this.BtnNewGame.Text = "New Campaign";
+            this.BtnNewGame.UseVisualStyleBackColor = true;
+            this.BtnNewGame.Click += new System.EventHandler(this.BtnNewGame_Click);
+            // 
+            // lblintro
+            // 
+            this.lblintro.AutoSize = true;
+            this.lblintro.Enabled = false;
+            this.lblintro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblintro.Location = new System.Drawing.Point(330, 68);
+            this.lblintro.Name = "lblintro";
+            this.lblintro.Size = new System.Drawing.Size(136, 13);
+            this.lblintro.TabIndex = 3;
+            this.lblintro.Text = "Welcome to WorldWeaver ";
+            this.lblintro.UseMnemonic = false;
+            // 
             // main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblintro);
+            this.Controls.Add(this.BtnNewGame);
+            this.Controls.Add(this.btnLoadGame);
             this.Controls.Add(this.btn_mapUpload);
             this.Name = "main_menu";
             this.Text = "main_menu";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btn_mapUpload;
+        private System.Windows.Forms.Button btnLoadGame;
+        private System.Windows.Forms.Button BtnNewGame;
+        private System.Windows.Forms.Label lblintro;
     }
 }

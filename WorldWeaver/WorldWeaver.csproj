@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="newGameRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newGameRoles.Designer.cs">
+      <DependentUpon>newGameRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="main_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="newGameRoles.resx">
+      <DependentUpon>newGameRoles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main_menu.resx">
       <DependentUpon>main_menu.cs</DependentUpon>
     </EmbeddedResource>

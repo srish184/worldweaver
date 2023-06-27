@@ -22,5 +22,15 @@ namespace WorldWeaver
             Form1 mapUploadForm = new Form1();
             mapUploadForm.Show();
         }
+
+        private void BtnNewGame_Click(object sender, EventArgs e)
+        {
+
+            RolesForm RolesForm = new RolesForm();
+            RolesForm.Show();
+                this.Hide();
+            
+        }
+    
     }
 }
