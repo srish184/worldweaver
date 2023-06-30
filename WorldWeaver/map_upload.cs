@@ -127,7 +127,7 @@ namespace WorldWeaver
                 SaveMapToDatabase(mapName, destinationPath);
 
                 // Show a message box with options to enter another map or return to the main menu
-                var result = MessageBox.Show("Image saved successfully! Would you like to add another map now?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                var result = MessageBox.Show("Image saved successfully! Want to add another map now?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (result == DialogResult.Yes)
                 {
