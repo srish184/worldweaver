@@ -40,7 +40,7 @@
             this.btn_mapUpload.Name = "btn_mapUpload";
             this.btn_mapUpload.Size = new System.Drawing.Size(131, 50);
             this.btn_mapUpload.TabIndex = 0;
-            this.btn_mapUpload.Text = "MAP UPLOAD MENU";
+            this.btn_mapUpload.Text = "Upload a Map";
             this.btn_mapUpload.UseVisualStyleBackColor = true;
             this.btn_mapUpload.Click += new System.EventHandler(this.btn_mapUpload_Click);
             // 

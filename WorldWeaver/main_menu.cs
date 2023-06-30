@@ -19,6 +19,7 @@ namespace WorldWeaver
 
         private void btn_mapUpload_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form1 mapUploadForm = new Form1();
             mapUploadForm.Show();
         }

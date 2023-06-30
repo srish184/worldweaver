@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 
+
 namespace WorldWeaver
 {
     public partial class Form1 : Form
@@ -24,6 +25,10 @@ namespace WorldWeaver
             // Disable the submit button by default.
             // The button is enabled only when an image file is selected and a map name is entered.
             btn_submit.Enabled = false;
+
+            // Hide map file pickers until a map name has been entered and user clicks next (btn_mapNameOkay)
+            lbl_mapFilePicker.Visible = false;
+            btn_mapFilePicker.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -146,6 +151,28 @@ namespace WorldWeaver
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void btn_mapNameOkay_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_mapName.Text))
+            {
+                MessageBox.Show("Please enter a map name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            lbl_mapFilePicker.Visible = true;
+            btn_mapFilePicker.Visible = true;
+        }
+
+        private void btn_navMainMenu_Click(object sender, EventArgs e)
+        {
+            // Hide the current form (Form1)
+            this.Hide();
+
+            // Show the main_menu form
+            main_menu mainMenuForm = new main_menu();
+            mainMenuForm.Show();
         }
     }
 }
