@@ -334,3 +334,6 @@ MigrationBackup/
 
 # Config file
 App.config
+
+# Ignore map_images folder
+/bin/map_images/

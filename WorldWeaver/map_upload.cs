@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient; 
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -38,7 +38,7 @@ namespace WorldWeaver
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
 
@@ -126,7 +126,19 @@ namespace WorldWeaver
                 string mapName = txt_mapName.Text;
                 SaveMapToDatabase(mapName, destinationPath);
 
-                MessageBox.Show("Image saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Show a message box with options to enter another map or return to the main menu
+                var result = MessageBox.Show("Image saved successfully! Would you like to add another map now?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Clear the form and allow the user to enter another map
+                    ClearForm();
+                }
+                else if (result == DialogResult.No)
+                {
+                    // Return to the main menu
+                    ReturnToMainMenu();
+                }
             }
             catch (Exception ex)
             {
@@ -166,6 +178,22 @@ namespace WorldWeaver
         }
 
         private void btn_navMainMenu_Click(object sender, EventArgs e)
+        {
+            // Return to the main menu
+            ReturnToMainMenu();
+        }
+
+        private void ClearForm()
+        {
+            txt_mapName.Text = string.Empty;
+            img_uploadPreview.Image = null;
+            btn_submit.Enabled = false;
+            selectedFilePath = string.Empty;
+            lbl_mapFilePicker.Visible = false;
+            btn_mapFilePicker.Visible = false;
+        }
+
+        private void ReturnToMainMenu()
         {
             // Hide the current form (Form1)
             this.Hide();
