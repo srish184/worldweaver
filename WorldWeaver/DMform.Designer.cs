@@ -70,6 +70,8 @@ namespace WorldWeaver
             this.txtbxSTR.Name = "txtbxSTR";
             this.txtbxSTR.Size = new System.Drawing.Size(27, 20);
             this.txtbxSTR.TabIndex = 0;
+            this.txtbxSTR.TextChanged += new System.EventHandler(this.txtbxSTR_TextChanged);
+            this.txtbxSTR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxSTR_KeyPress_1);
             // 
             // label1
             // 
@@ -161,6 +163,7 @@ namespace WorldWeaver
             this.groupBoxStats.TabIndex = 8;
             this.groupBoxStats.TabStop = false;
             this.groupBoxStats.Text = "NPC Stats";
+            this.groupBoxStats.Enter += new System.EventHandler(this.groupBoxStats_Enter);
             // 
             // txtbxAC
             // 
@@ -177,6 +180,7 @@ namespace WorldWeaver
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(27, 20);
             this.textBox8.TabIndex = 14;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // txtbxHP
             // 
@@ -184,6 +188,8 @@ namespace WorldWeaver
             this.txtbxHP.Name = "txtbxHP";
             this.txtbxHP.Size = new System.Drawing.Size(27, 20);
             this.txtbxHP.TabIndex = 13;
+            this.txtbxHP.TextChanged += new System.EventHandler(this.txtbxHP_TextChanged);
+            this.txtbxHP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxHP_KeyPress);
             // 
             // label9
             // 
@@ -209,6 +215,7 @@ namespace WorldWeaver
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(27, 20);
             this.textBox6.TabIndex = 10;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label7
             // 
@@ -225,6 +232,7 @@ namespace WorldWeaver
             this.txtbxCON.Name = "txtbxCON";
             this.txtbxCON.Size = new System.Drawing.Size(27, 20);
             this.txtbxCON.TabIndex = 8;
+            this.txtbxCON.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxCON_KeyPress);
             // 
             // label6
             // 
@@ -250,6 +258,7 @@ namespace WorldWeaver
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(27, 20);
             this.textBox4.TabIndex = 5;
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
             // txtbxCHA
             // 
@@ -257,6 +266,7 @@ namespace WorldWeaver
             this.txtbxCHA.Name = "txtbxCHA";
             this.txtbxCHA.Size = new System.Drawing.Size(27, 20);
             this.txtbxCHA.TabIndex = 4;
+            this.txtbxCHA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxCHA_KeyPress);
             // 
             // txtbxINT
             // 
@@ -264,6 +274,7 @@ namespace WorldWeaver
             this.txtbxINT.Name = "txtbxINT";
             this.txtbxINT.Size = new System.Drawing.Size(27, 20);
             this.txtbxINT.TabIndex = 3;
+            this.txtbxINT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxINT_KeyPress);
             // 
             // label4
             // 
@@ -350,7 +361,7 @@ namespace WorldWeaver
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 18;
-            this.btnMain.Text = "Main Menue";
+            this.btnMain.Text = "Main Menu";
             this.btnMain.UseVisualStyleBackColor = true;
             this.btnMain.Click += new System.EventHandler(this.button1_Click);
             // 
