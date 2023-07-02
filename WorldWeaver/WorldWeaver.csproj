@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DMform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DMform.Designer.cs">
+      <DependentUpon>DMform.cs</DependentUpon>
+    </Compile>
     <Compile Include="newGameRoles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DMform.resx">
+      <DependentUpon>DMform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="newGameRoles.resx">
       <DependentUpon>newGameRoles.cs</DependentUpon>
     </EmbeddedResource>

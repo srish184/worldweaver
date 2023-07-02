@@ -42,6 +42,7 @@ namespace WorldWeaver
             this.butDM.TabIndex = 0;
             this.butDM.Text = "Dungeon Master ";
             this.butDM.UseVisualStyleBackColor = true;
+            this.butDM.Click += new System.EventHandler(this.butDM_Click);
             // 
             // BtlPlayer
             // 
