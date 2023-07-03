@@ -29,3 +29,5 @@ C:\Users\kyle\source\repos\WorldWeaver\clone repo for WW\WorldWeaver\obj\Debug\W
 C:\Users\kyle\source\repos\WorldWeaver\clone repo for WW\WorldWeaver\obj\Debug\WorldWeaver.pdb
 C:\Users\kyle\source\repos\WorldWeaver\clone repo for WW\WorldWeaver\obj\Debug\WorldWeaver.RolesForm.resources
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.RolesForm.resources
+C:\Users\kyle\source\repos\WorldWeaver\clone repo for WW\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources

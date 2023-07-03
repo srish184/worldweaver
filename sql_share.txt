@@ -15,3 +15,36 @@ CREATE TABLE maps
 
 
 *********************************************
+table name: Character
+CREATE TABLE character(
+	character_id INT IDENTITY (1,1) NOT NULL,
+	name NVARCHAR(255),
+	race NVARCHAR(255),
+	level int,
+	class NVARCHAR(255),
+	stats_id int NULL,
+	CONSTRAINT PK_character_id PRIMARY KEY (character_id),
+	CONSTRAINT FK_character_stats FOREIGN KEY (stats_id)
+	REFERENCES stats (stats_id)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+	);
+
+(foreign key can be set in table designer)
+
+table name: stats
+CREATE TABLE stats(
+	stats_id INT IDENTITY (1,1) PRIMARY KEY,
+	hit_points INT,
+	strength INT,
+	dexterity INT,
+	constitution INT,
+	intelligence INT,
+	wisdom INT,
+	charisma INT,
+	proficiency_bonus INT,
+	walking_speed INT,
+	initiative INT,
+	armor_class INT
+	);
+
