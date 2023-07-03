@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient; 
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+
 
 namespace WorldWeaver
 {
@@ -24,6 +25,10 @@ namespace WorldWeaver
             // Disable the submit button by default.
             // The button is enabled only when an image file is selected and a map name is entered.
             btn_submit.Enabled = false;
+
+            // Hide map file pickers until a map name has been entered and user clicks next (btn_mapNameOkay)
+            lbl_mapFilePicker.Visible = false;
+            btn_mapFilePicker.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,7 +38,7 @@ namespace WorldWeaver
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
 
@@ -121,7 +126,19 @@ namespace WorldWeaver
                 string mapName = txt_mapName.Text;
                 SaveMapToDatabase(mapName, destinationPath);
 
-                MessageBox.Show("Image saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Show a message box with options to enter another map or return to the main menu
+                var result = MessageBox.Show("Image saved successfully! Want to add another map now?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Clear the form and allow the user to enter another map
+                    ClearForm();
+                }
+                else if (result == DialogResult.No)
+                {
+                    // Return to the main menu
+                    ReturnToMainMenu();
+                }
             }
             catch (Exception ex)
             {
@@ -146,6 +163,44 @@ namespace WorldWeaver
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void btn_mapNameOkay_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_mapName.Text))
+            {
+                MessageBox.Show("Please enter a map name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            lbl_mapFilePicker.Visible = true;
+            btn_mapFilePicker.Visible = true;
+        }
+
+        private void btn_navMainMenu_Click(object sender, EventArgs e)
+        {
+            // Return to the main menu
+            ReturnToMainMenu();
+        }
+
+        private void ClearForm()
+        {
+            txt_mapName.Text = string.Empty;
+            img_uploadPreview.Image = null;
+            btn_submit.Enabled = false;
+            selectedFilePath = string.Empty;
+            lbl_mapFilePicker.Visible = false;
+            btn_mapFilePicker.Visible = false;
+        }
+
+        private void ReturnToMainMenu()
+        {
+            // Hide the current form (Form1)
+            this.Hide();
+
+            // Show the main_menu form
+            main_menu mainMenuForm = new main_menu();
+            mainMenuForm.Show();
         }
     }
 }

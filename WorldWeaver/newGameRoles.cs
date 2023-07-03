@@ -26,5 +26,12 @@ namespace WorldWeaver
         {
 
         }
+
+        private void butDM_Click(object sender, EventArgs e)
+        {
+           DMForm DMForm = new DMForm();
+            DMForm.Show();
+            this.Hide();
+        }
     }
 }

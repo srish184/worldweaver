@@ -34,6 +34,8 @@
             this.lbl_mapFilePicker = new System.Windows.Forms.Label();
             this.img_uploadPreview = new System.Windows.Forms.PictureBox();
             this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_mapNameOkay = new System.Windows.Forms.Button();
+            this.btn_navMainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_uploadPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.txt_mapName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.txt_mapName.Location = new System.Drawing.Point(183, 67);
             this.txt_mapName.Name = "txt_mapName";
-            this.txt_mapName.Size = new System.Drawing.Size(474, 38);
+            this.txt_mapName.Size = new System.Drawing.Size(397, 38);
             this.txt_mapName.TabIndex = 1;
             // 
             // btn_mapFilePicker
@@ -95,11 +97,33 @@
             this.btn_submit.UseVisualStyleBackColor = true;
             this.btn_submit.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_mapNameOkay
+            // 
+            this.btn_mapNameOkay.Location = new System.Drawing.Point(587, 67);
+            this.btn_mapNameOkay.Name = "btn_mapNameOkay";
+            this.btn_mapNameOkay.Size = new System.Drawing.Size(70, 38);
+            this.btn_mapNameOkay.TabIndex = 8;
+            this.btn_mapNameOkay.Text = "Next";
+            this.btn_mapNameOkay.UseVisualStyleBackColor = true;
+            this.btn_mapNameOkay.Click += new System.EventHandler(this.btn_mapNameOkay_Click);
+            // 
+            // btn_navMainMenu
+            // 
+            this.btn_navMainMenu.Location = new System.Drawing.Point(38, 13);
+            this.btn_navMainMenu.Name = "btn_navMainMenu";
+            this.btn_navMainMenu.Size = new System.Drawing.Size(75, 23);
+            this.btn_navMainMenu.TabIndex = 9;
+            this.btn_navMainMenu.Text = "Main Menu";
+            this.btn_navMainMenu.UseVisualStyleBackColor = true;
+            this.btn_navMainMenu.Click += new System.EventHandler(this.btn_navMainMenu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_navMainMenu);
+            this.Controls.Add(this.btn_mapNameOkay);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.img_uploadPreview);
             this.Controls.Add(this.btn_mapFilePicker);
@@ -123,6 +147,8 @@
         private System.Windows.Forms.Label lbl_mapFilePicker;
         private System.Windows.Forms.PictureBox img_uploadPreview;
         private System.Windows.Forms.Button btn_submit;
+        private System.Windows.Forms.Button btn_mapNameOkay;
+        private System.Windows.Forms.Button btn_navMainMenu;
     }
 }
 
