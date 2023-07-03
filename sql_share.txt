@@ -16,15 +16,15 @@ CREATE TABLE maps
 
 *********************************************
 table name: Character
-CREATE TABLE character(
-	character_id INT IDENTITY (1,1) NOT NULL,
+CREATE TABLE player(
+	player_id INT IDENTITY (1,1) NOT NULL,
 	name NVARCHAR(255),
 	race NVARCHAR(255),
 	level int,
 	class NVARCHAR(255),
 	stats_id int NULL,
-	CONSTRAINT PK_character_id PRIMARY KEY (character_id),
-	CONSTRAINT FK_character_stats FOREIGN KEY (stats_id)
+	CONSTRAINT PK_player_id PRIMARY KEY (player_id),
+	CONSTRAINT FK_player_stats FOREIGN KEY (stats_id)
 	REFERENCES stats (stats_id)
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
@@ -48,3 +48,7 @@ CREATE TABLE stats(
 	armor_class INT
 	);
 
+table name: npc
+CREATE TABLE npc(
+	
+	
