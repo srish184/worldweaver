@@ -1,0 +1,11 @@
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\bin\Debug\CharacterCreation.exe.config
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\bin\Debug\CharacterCreation.exe
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\bin\Debug\CharacterCreation.pdb
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.csproj.AssemblyReference.cache
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.Form1.resources
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.Properties.Resources.resources
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.csproj.GenerateResource.cache
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.csproj.CoreCompileInputs.cache
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.exe
+C:\Users\Jose Aguayo-Castro\source\repos\CharacterCreation\obj\Debug\CharacterCreation.pdb
