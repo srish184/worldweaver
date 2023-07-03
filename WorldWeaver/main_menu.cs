@@ -32,6 +32,10 @@ namespace WorldWeaver
                 this.Hide();
             
         }
-    
+
+        private void btnLoadGame_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
