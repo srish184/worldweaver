@@ -16,7 +16,7 @@ CREATE TABLE maps
 
 *********************************************
 table name: Character
-CREATE TABLE character(
+CREATE TABLE players (
 	character_id INT IDENTITY (1,1) NOT NULL,
 	name NVARCHAR(255),
 	race NVARCHAR(255),
