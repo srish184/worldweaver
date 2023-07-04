@@ -35,13 +35,10 @@ namespace WorldWeaver
 
         private void btnLoadGame_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
 
-=======
             LoadGame LoadGame = new LoadGame();
             LoadGame.Show();
             this.Hide();
->>>>>>> b03ea3f2c7ad9a39a4bf6fb079d104d7e5a464a3
         }
     }
 }
