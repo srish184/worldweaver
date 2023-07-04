@@ -32,8 +32,13 @@ namespace WorldWeaver
             {
                 connection.Open();
 
-                using (SqlCommand  command = new SqlCommand("INSERT INTO player ("))
+                using (SqlCommand command = new SqlCommand("INSERT INTO player ("));
             }
+        }
+
+        private void nametxtBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

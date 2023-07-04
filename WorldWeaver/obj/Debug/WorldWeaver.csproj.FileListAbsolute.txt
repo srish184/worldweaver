@@ -31,3 +31,20 @@ C:\Users\kyle\source\repos\WorldWeaver\clone repo for WW\WorldWeaver\obj\Debug\W
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.RolesForm.resources
 C:\Users\kyle\source\repos\WorldWeaver\clone repo for WW\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.csproj.AssemblyReference.cache
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.RolesForm.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.main_menu.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.Form1.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.playercreation.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.Properties.Resources.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.csproj.GenerateResource.cache
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.csproj.CoreCompileInputs.cache
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.exe
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.pdb
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\WorldWeaver.exe.config
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\WorldWeaver.exe
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\WorldWeaver.pdb
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.csproj.CopyComplete
