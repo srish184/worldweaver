@@ -80,6 +80,12 @@
     <Compile Include="map_upload.Designer.cs">
       <DependentUpon>map_upload.cs</DependentUpon>
     </Compile>
+    <Compile Include="playercreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="playercreation.Designer.cs">
+      <DependentUpon>playercreation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DMform.resx">
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="map_upload.resx">
       <DependentUpon>map_upload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="playercreation.resx">
+      <DependentUpon>playercreation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
