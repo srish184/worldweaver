@@ -36,8 +36,8 @@ namespace WorldWeaver
         private void btnLoadGame_Click(object sender, EventArgs e)
         {
 
-            LoadGame LoadGame = new LoadGame();
-            LoadGame.Show();
+            loadGame loadGame = new loadGame();
+            loadGame.Show();
             this.Hide();
         }
     }
