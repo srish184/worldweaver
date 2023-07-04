@@ -19,7 +19,9 @@ namespace WorldWeaver
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            playercreation playercreation = new playercreation();
+            playercreation.Show();
+            this.Hide();
         }
 
         private void RolesForm_Load(object sender, EventArgs e)
