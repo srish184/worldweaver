@@ -160,5 +160,19 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int STR = int.Parse(textBox6.Text);
+            int CHA = int.Parse(textBox11.Text);
+            int CON = int.Parse(textBox8.Text);
+            int DEX = int.Parse(textBox7.Text);
+            int INT = int.Parse(textBox9.Text);
+            int WIS = int.Parse(textBox10.Text);
+            int HP = int.Parse(textBox5.Text);
+            int AC = int.Parse(textBox14.Text);
+            int Level = int.Parse(textBox3.Text);
+
+        }
     }
 }
