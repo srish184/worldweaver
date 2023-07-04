@@ -48,3 +48,4 @@ C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\WorldWeaver.pdb
 C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.csproj.CopyComplete
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.LoadGame.resources

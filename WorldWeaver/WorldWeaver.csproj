@@ -56,6 +56,12 @@
     <Compile Include="DMform.Designer.cs">
       <DependentUpon>DMform.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadGame.Designer.cs">
+      <DependentUpon>LoadGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="newGameRoles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DMform.resx">
       <DependentUpon>DMform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadGame.resx">
+      <DependentUpon>LoadGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="newGameRoles.resx">
       <DependentUpon>newGameRoles.cs</DependentUpon>

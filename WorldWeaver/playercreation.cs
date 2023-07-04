@@ -40,5 +40,27 @@ namespace WorldWeaver
         {
 
         }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMain_Click(object sender, EventArgs e)
+        {
+            main_menu main_menu = new main_menu();
+            main_menu.Show();
+            this.Hide();
+        }
     }
 }
