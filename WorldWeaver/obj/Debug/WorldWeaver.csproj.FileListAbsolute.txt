@@ -48,3 +48,22 @@ C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.csproj
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.exe
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.pdb
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.loadGame.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.AssemblyReference.cache
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.LoadGame.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.RolesForm.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.main_menu.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.Form1.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.playercreation.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.Properties.Resources.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.GenerateResource.cache
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.CoreCompileInputs.cache
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.exe
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.pdb
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\bin\Debug\WorldWeaver.exe.config
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\bin\Debug\WorldWeaver.exe
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\bin\Debug\WorldWeaver.pdb
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.CopyComplete

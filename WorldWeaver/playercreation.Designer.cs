@@ -45,7 +45,6 @@
             this.acL = new System.Windows.Forms.Label();
             this.pbL = new System.Windows.Forms.Label();
             this.strL = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -63,6 +62,7 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.sbmtBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // pname
@@ -219,13 +219,6 @@
             this.strL.TabIndex = 16;
             this.strL.Text = "Strength";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(55, 210);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 17;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(55, 295);
@@ -343,18 +336,28 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(631, 1075);
+            this.saveBtn.Location = new System.Drawing.Point(656, 1049);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(107, 36);
             this.saveBtn.TabIndex = 34;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(55, 207);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 35;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // playercreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 1178);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.sbmtBtn);
             this.Controls.Add(this.textBox16);
@@ -372,7 +375,6 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.strL);
             this.Controls.Add(this.pbL);
             this.Controls.Add(this.acL);
@@ -416,7 +418,6 @@
         private System.Windows.Forms.Label acL;
         private System.Windows.Forms.Label pbL;
         private System.Windows.Forms.Label strL;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -434,5 +435,6 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Button sbmtBtn;
         private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
