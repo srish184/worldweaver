@@ -333,6 +333,7 @@
             this.sbmtBtn.TabIndex = 33;
             this.sbmtBtn.Text = "Submit";
             this.sbmtBtn.UseVisualStyleBackColor = true;
+            this.sbmtBtn.Click += new System.EventHandler(this.sbmtBtn_Click);
             // 
             // saveBtn
             // 

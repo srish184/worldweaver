@@ -32,7 +32,7 @@ namespace WorldWeaver
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
 
-            string query = "INSERT INTO player (player_name, level) VALUES ('  textBox1 ' +  textBox3 )";
+            string query = "INSERT INTO player (player_name, race, level, class) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', " + textBox3.Text + ", '" + textBox4.Text + "')";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
             connection.Close();
@@ -42,6 +42,18 @@ namespace WorldWeaver
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void sbmtBtn_Click(object sender, EventArgs e)
+        {
+            string connectionString = @"Data Source=DESKTOP-CD77NKS\SQLEXPRESS;Initial Catalog=worldweaver;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+
+            string query = "INSERT INTO player (notes_to_dm) VALUES ('" + textBox16.Text + "')";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
         }
     }
 }
