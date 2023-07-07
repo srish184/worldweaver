@@ -59,9 +59,9 @@ namespace WorldWeaver
             this.lblslect.AutoSize = true;
             this.lblslect.Location = new System.Drawing.Point(56, 31);
             this.lblslect.Name = "lblslect";
-            this.lblslect.Size = new System.Drawing.Size(155, 13);
+            this.lblslect.Size = new System.Drawing.Size(161, 13);
             this.lblslect.TabIndex = 2;
-            this.lblslect.Text = "slect your role for this campaign";
+            this.lblslect.Text = "select your role for this campaign";
             // 
             // RolesForm
             // 
