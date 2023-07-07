@@ -337,3 +337,7 @@ App.config
 
 # Ignore map_images folder
 /bin/map_images/
+
+# Ignore token_images folder
+/bin/token_images/
+
