@@ -53,10 +53,11 @@ namespace WorldWeaver
                 img_tokenPreview.SizeMode = PictureBoxSizeMode.StretchImage;
                 img_tokenPreview.Image = selectedImage;
 
-                // Disable the submit button
-                btn_submit.Enabled = false;
+                // Enable the submit button
+                btn_submit.Enabled = true;
             }
         }
+
 
         private void btn_submit_Click(object sender, EventArgs e)
         {

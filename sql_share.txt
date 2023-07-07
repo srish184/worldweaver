@@ -32,7 +32,7 @@ CREATE TABLE player(
 	);
 
 (foreign key can be set in table designer)
-
+*********************************************
 table name: stats
 CREATE TABLE stats(
 	stats_id INT IDENTITY (1,1) PRIMARY KEY,
@@ -49,6 +49,7 @@ CREATE TABLE stats(
 	armor_class INT
 	);
 
+*********************************************
 table name: npc
 CREATE TABLE npc(
 	npc_id INT IDENTITY (1,1) NOT NULL,
@@ -69,5 +70,14 @@ CREATE TABLE npc(
 	armor_class INT,
 	character_notes NVARCHAR(255)
 	);
-	
+
+*********************************************
+table name: tokens
+CREATE TABLE tokens (
+  token_id INT IDENTITY(1,1) PRIMARY KEY,
+  token_name VARCHAR(100),
+  token_filepath VARCHAR(255)
+);
+
+*********************************************
 	
