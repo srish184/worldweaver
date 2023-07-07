@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -69,7 +71,25 @@ namespace WorldWeaver
 
             try
             {
+                // Create the token_images subfolder if it doesn't exist
+                string subfolderPath = Path.GetFullPath(Path.Combine(Application.StartupPath, @"..\token_images"));
+                if (!Directory.Exists(subfolderPath))
+                {
+                    Directory.CreateDirectory(subfolderPath);
+                }
+
+                // Get the file name from the file path
+                string fileName = Path.GetFileName(selectedFilePath);
+
+                // Build the destination path for the image
+                string destinationPath = Path.Combine(subfolderPath, fileName);
+
+                // Copy the image file to the destination path
+                File.Copy(selectedFilePath, destinationPath, true);
+
                 // Save the token information to the database
+                string tokenName = txt_tokenName.Text;
+                SaveTokenToDatabase(tokenName, destinationPath);
 
                 // Show a success message
                 MessageBox.Show("Token saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -79,5 +99,24 @@ namespace WorldWeaver
                 MessageBox.Show($"Error saving token: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void SaveTokenToDatabase(string tokenName, string destinationPath)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("INSERT INTO tokens (token_name, token_filepath) VALUES (@tokenName, @filePath)", connection))
+                {
+                    command.Parameters.AddWithValue("@tokenName", tokenName);
+                    command.Parameters.AddWithValue("@filePath", destinationPath);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
+
