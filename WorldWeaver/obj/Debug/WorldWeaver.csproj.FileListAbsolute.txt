@@ -68,3 +68,5 @@ C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\bin\Debug\Syste
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.CopyComplete
 C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.playercreation.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.LoadGame.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.playercreation.resources
