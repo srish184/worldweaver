@@ -40,5 +40,13 @@ namespace WorldWeaver
             loadGame.Show();
             this.Hide();
         }
+
+        private void btn_navToken_Click(object sender, EventArgs e)
+        {
+            upload_token uploadTokenForm = new upload_token();
+            uploadTokenForm.Show();
+            this.Hide();
+        }
+
     }
 }

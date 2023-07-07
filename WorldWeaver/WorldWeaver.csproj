@@ -88,6 +88,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="upload_token.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="upload_token.Designer.cs">
+      <DependentUpon>upload_token.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DMform.resx">
       <DependentUpon>DMform.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +122,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="upload_token.resx">
+      <DependentUpon>upload_token.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
