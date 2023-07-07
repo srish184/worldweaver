@@ -63,6 +63,7 @@
             this.sbmtBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.schara = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pname
@@ -337,11 +338,11 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(656, 1049);
+            this.saveBtn.Location = new System.Drawing.Point(239, 1078);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(107, 36);
             this.saveBtn.TabIndex = 34;
-            this.saveBtn.Text = "Save";
+            this.saveBtn.Text = "Save Stats";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
@@ -353,11 +354,22 @@
             this.textBox1.TabIndex = 35;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // schara
+            // 
+            this.schara.Location = new System.Drawing.Point(620, 1078);
+            this.schara.Name = "schara";
+            this.schara.Size = new System.Drawing.Size(163, 36);
+            this.schara.TabIndex = 36;
+            this.schara.Text = "Save Character";
+            this.schara.UseVisualStyleBackColor = true;
+            this.schara.Click += new System.EventHandler(this.schara_Click);
+            // 
             // playercreation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(966, 1178);
+            this.Controls.Add(this.schara);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.sbmtBtn);
@@ -437,5 +449,6 @@
         private System.Windows.Forms.Button sbmtBtn;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button schara;
     }
 }
