@@ -99,6 +99,7 @@
             this.Controls.Add(this.btn_mapUpload);
             this.Name = "main_menu";
             this.Text = "main_menu";
+            this.Load += new System.EventHandler(this.main_menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

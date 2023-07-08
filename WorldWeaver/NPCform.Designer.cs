@@ -1,7 +1,7 @@
 ﻿
 namespace WorldWeaver
 {
-    partial class DMForm
+    partial class NPCForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,23 +32,19 @@ namespace WorldWeaver
             this.txtbxSTR = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rtbxDmNotes = new System.Windows.Forms.RichTextBox();
-            this.btnSaveDmNotes = new System.Windows.Forms.Button();
             this.btnSaveNPC = new System.Windows.Forms.Button();
-            this.btnContinue = new System.Windows.Forms.Button();
             this.groupBoxStats = new System.Windows.Forms.GroupBox();
             this.txtbxAC = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBxAC = new System.Windows.Forms.TextBox();
             this.txtbxHP = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtbxDEX = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBxDEX = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtbxCON = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtbxWIS = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblWIS = new System.Windows.Forms.Label();
+            this.txtBxWIS = new System.Windows.Forms.TextBox();
             this.txtbxCHA = new System.Windows.Forms.TextBox();
             this.txtbxINT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -92,66 +88,29 @@ namespace WorldWeaver
             this.label2.Text = "NPC Creator";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(310, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "dm story notes ";
-            // 
-            // rtbxDmNotes
-            // 
-            this.rtbxDmNotes.Location = new System.Drawing.Point(313, 70);
-            this.rtbxDmNotes.Name = "rtbxDmNotes";
-            this.rtbxDmNotes.Size = new System.Drawing.Size(202, 208);
-            this.rtbxDmNotes.TabIndex = 4;
-            this.rtbxDmNotes.Text = "";
-            // 
-            // btnSaveDmNotes
-            // 
-            this.btnSaveDmNotes.Location = new System.Drawing.Point(384, 607);
-            this.btnSaveDmNotes.Name = "btnSaveDmNotes";
-            this.btnSaveDmNotes.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveDmNotes.TabIndex = 5;
-            this.btnSaveDmNotes.Text = "save notes";
-            this.btnSaveDmNotes.UseVisualStyleBackColor = true;
-            this.btnSaveDmNotes.Click += new System.EventHandler(this.btnSaveDmNotes_Click);
-            // 
             // btnSaveNPC
             // 
-            this.btnSaveNPC.Location = new System.Drawing.Point(10, 607);
+            this.btnSaveNPC.Location = new System.Drawing.Point(112, 607);
             this.btnSaveNPC.Name = "btnSaveNPC";
             this.btnSaveNPC.Size = new System.Drawing.Size(162, 23);
             this.btnSaveNPC.TabIndex = 6;
-            this.btnSaveNPC.Text = "Save and add more ";
+            this.btnSaveNPC.Text = "Save";
             this.btnSaveNPC.UseVisualStyleBackColor = true;
             this.btnSaveNPC.Click += new System.EventHandler(this.btnSaveNPC_Click);
-            // 
-            // btnContinue
-            // 
-            this.btnContinue.Location = new System.Drawing.Point(223, 607);
-            this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(75, 23);
-            this.btnContinue.TabIndex = 7;
-            this.btnContinue.Text = "Continue ";
-            this.btnContinue.UseVisualStyleBackColor = true;
-            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // groupBoxStats
             // 
             this.groupBoxStats.Controls.Add(this.txtbxAC);
-            this.groupBoxStats.Controls.Add(this.textBox8);
+            this.groupBoxStats.Controls.Add(this.textBxAC);
             this.groupBoxStats.Controls.Add(this.txtbxHP);
             this.groupBoxStats.Controls.Add(this.label9);
             this.groupBoxStats.Controls.Add(this.txtbxDEX);
-            this.groupBoxStats.Controls.Add(this.textBox6);
+            this.groupBoxStats.Controls.Add(this.textBxDEX);
             this.groupBoxStats.Controls.Add(this.label7);
             this.groupBoxStats.Controls.Add(this.txtbxCON);
             this.groupBoxStats.Controls.Add(this.label6);
-            this.groupBoxStats.Controls.Add(this.txtbxWIS);
-            this.groupBoxStats.Controls.Add(this.textBox4);
+            this.groupBoxStats.Controls.Add(this.lblWIS);
+            this.groupBoxStats.Controls.Add(this.txtBxWIS);
             this.groupBoxStats.Controls.Add(this.txtbxCHA);
             this.groupBoxStats.Controls.Add(this.txtbxINT);
             this.groupBoxStats.Controls.Add(this.label4);
@@ -174,13 +133,13 @@ namespace WorldWeaver
             this.txtbxAC.TabIndex = 15;
             this.txtbxAC.Text = "AC";
             // 
-            // textBox8
+            // textBxAC
             // 
-            this.textBox8.Location = new System.Drawing.Point(179, 103);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(27, 20);
-            this.textBox8.TabIndex = 14;
-            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
+            this.textBxAC.Location = new System.Drawing.Point(179, 103);
+            this.textBxAC.Name = "textBxAC";
+            this.textBxAC.Size = new System.Drawing.Size(27, 20);
+            this.textBxAC.TabIndex = 14;
+            this.textBxAC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // txtbxHP
             // 
@@ -209,13 +168,14 @@ namespace WorldWeaver
             this.txtbxDEX.TabIndex = 11;
             this.txtbxDEX.Text = "dexterity";
             // 
-            // textBox6
+            // textBxDEX
             // 
-            this.textBox6.Location = new System.Drawing.Point(179, 73);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(27, 20);
-            this.textBox6.TabIndex = 10;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.textBxDEX.Location = new System.Drawing.Point(179, 73);
+            this.textBxDEX.Name = "textBxDEX";
+            this.textBxDEX.Size = new System.Drawing.Size(27, 20);
+            this.textBxDEX.TabIndex = 10;
+            this.textBxDEX.TextChanged += new System.EventHandler(this.TxtBxDEX);
+            this.textBxDEX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBxDEX);
             // 
             // label7
             // 
@@ -243,22 +203,22 @@ namespace WorldWeaver
             this.label6.TabIndex = 7;
             this.label6.Text = "charisma ";
             // 
-            // txtbxWIS
+            // lblWIS
             // 
-            this.txtbxWIS.AutoSize = true;
-            this.txtbxWIS.Location = new System.Drawing.Point(128, 47);
-            this.txtbxWIS.Name = "txtbxWIS";
-            this.txtbxWIS.Size = new System.Drawing.Size(45, 13);
-            this.txtbxWIS.TabIndex = 6;
-            this.txtbxWIS.Text = "Wisdom";
+            this.lblWIS.AutoSize = true;
+            this.lblWIS.Location = new System.Drawing.Point(128, 47);
+            this.lblWIS.Name = "lblWIS";
+            this.lblWIS.Size = new System.Drawing.Size(45, 13);
+            this.lblWIS.TabIndex = 6;
+            this.lblWIS.Text = "Wisdom";
             // 
-            // textBox4
+            // txtBxWIS
             // 
-            this.textBox4.Location = new System.Drawing.Point(179, 44);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(27, 20);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            this.txtBxWIS.Location = new System.Drawing.Point(179, 44);
+            this.txtBxWIS.Name = "txtBxWIS";
+            this.txtBxWIS.Size = new System.Drawing.Size(27, 20);
+            this.txtBxWIS.TabIndex = 5;
+            this.txtBxWIS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBxWIS);
             // 
             // txtbxCHA
             // 
@@ -339,7 +299,7 @@ namespace WorldWeaver
             // 
             // rtbxCharacterNotes
             // 
-            this.rtbxCharacterNotes.Location = new System.Drawing.Point(313, 300);
+            this.rtbxCharacterNotes.Location = new System.Drawing.Point(305, 66);
             this.rtbxCharacterNotes.Name = "rtbxCharacterNotes";
             this.rtbxCharacterNotes.Size = new System.Drawing.Size(202, 288);
             this.rtbxCharacterNotes.TabIndex = 16;
@@ -349,15 +309,16 @@ namespace WorldWeaver
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(320, 284);
+            this.label14.Location = new System.Drawing.Point(299, 36);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 13);
             this.label14.TabIndex = 17;
             this.label14.Text = "Character notes";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(467, 26);
+            this.btnMain.Location = new System.Drawing.Point(358, 607);
             this.btnMain.Name = "btnMain";
             this.btnMain.Size = new System.Drawing.Size(75, 23);
             this.btnMain.TabIndex = 18;
@@ -365,7 +326,7 @@ namespace WorldWeaver
             this.btnMain.UseVisualStyleBackColor = true;
             this.btnMain.Click += new System.EventHandler(this.button1_Click);
             // 
-            // DMForm
+            // NPCForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -380,14 +341,10 @@ namespace WorldWeaver
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBoxStats);
-            this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.btnSaveNPC);
-            this.Controls.Add(this.btnSaveDmNotes);
-            this.Controls.Add(this.rtbxDmNotes);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "DMForm";
-            this.Text = "Dungeon master";
+            this.Name = "NPCForm";
+            this.Text = "NPC Creation";
             this.groupBoxStats.ResumeLayout(false);
             this.groupBoxStats.PerformLayout();
             this.ResumeLayout(false);
@@ -400,24 +357,20 @@ namespace WorldWeaver
         private System.Windows.Forms.TextBox txtbxSTR;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox rtbxDmNotes;
-        private System.Windows.Forms.Button btnSaveDmNotes;
         private System.Windows.Forms.Button btnSaveNPC;
-        private System.Windows.Forms.Button btnContinue;
         private System.Windows.Forms.GroupBox groupBoxStats;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label txtbxAC;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBxAC;
         private System.Windows.Forms.TextBox txtbxHP;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label txtbxDEX;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBxDEX;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtbxCON;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label txtbxWIS;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblWIS;
+        private System.Windows.Forms.TextBox txtBxWIS;
         private System.Windows.Forms.TextBox txtbxCHA;
         private System.Windows.Forms.TextBox txtbxINT;
         private System.Windows.Forms.Label label11;

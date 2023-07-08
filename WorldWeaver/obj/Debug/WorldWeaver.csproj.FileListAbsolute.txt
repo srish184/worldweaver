@@ -37,7 +37,6 @@ C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\bin\Debug\WorldWeaver.pdb
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.csproj.AssemblyReference.cache
-C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.RolesForm.resources
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.main_menu.resources
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.Form1.resources
@@ -71,3 +70,6 @@ C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.player
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.LoadGame.resources
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.playercreation.resources
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.upload_token.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.upload_token.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.NPCForm.resources
+C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.worldform.resources

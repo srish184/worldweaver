@@ -130,6 +130,7 @@
             this.Controls.Add(this.label1);
             this.Name = "upload_token";
             this.Text = "upload_token";
+            this.Load += new System.EventHandler(this.upload_token_Load);
             ((System.ComponentModel.ISupportInitialize)(this.img_tokenPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -50,11 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DMform.cs">
+    <Compile Include="world.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DMform.Designer.cs">
-      <DependentUpon>DMform.cs</DependentUpon>
+    <Compile Include="world.Designer.cs">
+      <DependentUpon>world.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPCform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPCform.Designer.cs">
+      <DependentUpon>NPCform.cs</DependentUpon>
     </Compile>
     <Compile Include="loadGame.cs">
       <SubType>Form</SubType>
@@ -94,8 +100,8 @@
     <Compile Include="upload_token.Designer.cs">
       <DependentUpon>upload_token.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DMform.resx">
-      <DependentUpon>DMform.cs</DependentUpon>
+    <EmbeddedResource Include="NPCform.resx">
+      <DependentUpon>NPCform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loadGame.resx">
       <DependentUpon>loadGame.cs</DependentUpon>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="upload_token.resx">
       <DependentUpon>upload_token.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="world.resx">
+      <DependentUpon>world.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

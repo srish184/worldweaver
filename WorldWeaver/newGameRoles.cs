@@ -31,7 +31,7 @@ namespace WorldWeaver
 
         private void butDM_Click(object sender, EventArgs e)
         {
-           DMForm DMForm = new DMForm();
+           NPCForm DMForm = new NPCForm();
             DMForm.Show();
             this.Hide();
         }

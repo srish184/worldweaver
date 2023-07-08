@@ -48,5 +48,9 @@ namespace WorldWeaver
             this.Hide();
         }
 
+        private void main_menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
