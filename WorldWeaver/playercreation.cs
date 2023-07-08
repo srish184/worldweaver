@@ -28,7 +28,7 @@ namespace WorldWeaver
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            //Copy and paste your own data source 
+            //Copy and paste your own data source
             string connectionString = @"Data Source=DESKTOP-CD77NKS\SQLEXPRESS;Initial Catalog=worldweaver;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();

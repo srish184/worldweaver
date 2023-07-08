@@ -49,7 +49,6 @@ C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.pdb
 C:\Users\kyle\Source\Repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.loadGame.resources
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.AssemblyReference.cache
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.csproj.SuggestedBindingRedirects.cache
-C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.DMForm.resources
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.LoadGame.resources
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.RolesForm.resources
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.main_menu.resources
@@ -73,3 +72,6 @@ C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.upload
 C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.upload_token.resources
 C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.NPCForm.resources
 C:\Users\kyle\source\repos\worldweaver1\WorldWeaver\obj\Debug\WorldWeaver.worldform.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.NPCForm.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.upload_token.resources
+C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.worldform.resources

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Configuration;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WorldWeaver
 {
@@ -49,7 +50,7 @@ namespace WorldWeaver
         }
         private void ClearForm()
         {
-            foreach (Control control in this.Controls)
+            /*foreach (Control control in this.Controls)
             {
                 if (control is TextBox)
                 {
@@ -61,7 +62,7 @@ namespace WorldWeaver
                     RichTextBox richTextBox = (RichTextBox)control;
                     richTextBox.Clear();
                 }
-            }
+            }*/
         }
 
         private void btnSaveNPC_Click(object sender, EventArgs e)
@@ -90,18 +91,23 @@ namespace WorldWeaver
                 this.Hide();
             }
 
-         
+
 
 
 
             // add everything to database then clear out the form to add more information
+            string connectionString = @"Data Source=DESKTOP-CD77NKS\SQLEXPRESS;Initial Catalog=worldweaver;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            string query = "INSERT INTO npc(npc_name, hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, armor_class, character_notes, skills, abilities, attacks) VALUES ('" + npcnameBox.Text + "','" + txtbxHP.Text + "', '" + txtbxSTR.Text + "', '" + textBxDEX.Text + "', '" + txtbxCON.Text + "', '" + txtbxINT.Text + "', '" + txtBxWIS.Text + "', '" + txtbxCHA.Text + "', '" + textBxAC.Text + "', '" + rtbxCharacterNotes.Text + "', '" + rtbxSkills.Text + "', '" + rtbxAbilities.Text + "', '" + rtbxAttacks.Text + "')";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.ExecuteNonQuery();
+            connection.Close();
         }
-
         private void btnSaveDmNotes_Click(object sender, EventArgs e)
         {
             // adds info to database 
         }
-
         private void groupBoxStats_Enter(object sender, EventArgs e)
         {
         }
@@ -122,7 +128,6 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void txtbxCHA_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -130,7 +135,6 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void txtbxCON_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -141,7 +145,6 @@ namespace WorldWeaver
         private void txtbxHP_TextChanged(object sender, EventArgs e)
         {
         }
-
         private void txtbxHP_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -149,7 +152,6 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void txtbxINT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -157,7 +159,6 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -165,7 +166,6 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -173,7 +173,6 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -181,12 +180,9 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void label14_Click(object sender, EventArgs e)
         {
-
         }
-
         private void textBxWIS(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -194,15 +190,14 @@ namespace WorldWeaver
                 e.Handled = true;
             }
         }
-
         private void TxtBxDEX(object sender, EventArgs e)
         {
-
         }
-
         private void txtBxDEX(object sender, KeyPressEventArgs e)
         {
-
+        }
+        private void NPCForm_Load(object sender, EventArgs e)
+        {
         }
     }
 }
