@@ -64,10 +64,15 @@ namespace WorldWeaver
                 }
             }*/
         }
-
         private void btnSaveNPC_Click(object sender, EventArgs e)
         {
-            
+            string name = npcnameBox.Text;
+            string race = txtbxRace.Text;
+            string CNotes = rtbxCharacterNotes.Text;
+            string skills = rtbxSkills.Text;
+            string abilities = rtbxAbilities.Text;
+            string attacks = rtbxAttacks.Text;
+
             int STR = int.Parse(txtbxSTR.Text);
             int CHA = int.Parse(txtbxCHA.Text);
             int CON = int.Parse(txtbxCON.Text);
@@ -76,34 +81,62 @@ namespace WorldWeaver
             int WIS = int.Parse(txtBxWIS.Text);
             int HP = int.Parse(txtbxHP.Text);
             int AC = int.Parse(textBxAC.Text);
-            
-            var result = MessageBox.Show("NPC saved succesfully! do you want to make another one?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            var result = MessageBox.Show("NPC saved successfully! Do you want to make another one?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
                 // Clear the form and allow the user to add another token
-               ClearForm();
+                ClearForm();
             }
             else if (result == DialogResult.No)
             {
                 // Return to the main menu
-                worldform worldform = new worldform();
-                worldform.Show();
+                worldform worldForm = new worldform();
+                worldForm.Show();
                 this.Hide();
             }
 
+            // add everything to the database then clear out the form to add more information
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                using (SqlCommand command = new SqlCommand("INSERT INTO npc (name, race, strength, dexterity, constitution, intelligence, wisdom, charisma, hit_points, armor_class, character_notes, skills, abilities, attacks) VALUES (@name, @race, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @hitPoints, @armorClass, @characterNotes, @skills, @abilities, @attacks)", connection))
+                {
+                    command.Parameters.AddWithValue("@name", name);
+                    command.Parameters.AddWithValue("@race", race);
+                    // command.Parameters.AddWithValue("@",level); do not need
+                    // command.Parameters.AddWithValue("@",class); do not need
+                    command.Parameters.AddWithValue("@strength", STR);
+                    command.Parameters.AddWithValue("@dexterity", DEX);
+                    command.Parameters.AddWithValue("@constitution", CON);
+                    command.Parameters.AddWithValue("@intelligence", INT);
+                    command.Parameters.AddWithValue("@wisdom", WIS);
+                    command.Parameters.AddWithValue("@charisma", CHA);
+                    //command.Parameters.AddWithValue("@"proficiency_bonus); do not need
+                    //   command.Parameters.AddWithValue("@walking_speed); do not need
+                    //   command.Parameters.AddWithValue("@initiative); do not need
+                    command.Parameters.AddWithValue("@hitPoints", HP);
+                    command.Parameters.AddWithValue("@armorClass", AC);
+                    command.Parameters.AddWithValue("@characterNotes", CNotes);
+                    // stuff that needes added to database 
+                    command.Parameters.AddWithValue("@skills", skills);
+                    command.Parameters.AddWithValue("@abilities", abilities);
+                    command.Parameters.AddWithValue("@attacks", attacks);
 
-
-            // add everything to database then clear out the form to add more information
-            string connectionString = @"Data Source=DESKTOP-CD77NKS\SQLEXPRESS;Initial Catalog=worldweaver;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            string query = "INSERT INTO npc(npc_name, hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, armor_class, character_notes, skills, abilities, attacks) VALUES ('" + npcnameBox.Text + "','" + txtbxHP.Text + "', '" + txtbxSTR.Text + "', '" + textBxDEX.Text + "', '" + txtbxCON.Text + "', '" + txtbxINT.Text + "', '" + txtBxWIS.Text + "', '" + txtbxCHA.Text + "', '" + textBxAC.Text + "', '" + rtbxCharacterNotes.Text + "', '" + rtbxSkills.Text + "', '" + rtbxAbilities.Text + "', '" + rtbxAttacks.Text + "')";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
+                    command.ExecuteNonQuery();
+                }
+            }
         }
+
+
+
+
+        // add everything to database then clear out the form to add more information
+
+        
         private void btnSaveDmNotes_Click(object sender, EventArgs e)
         {
             // adds info to database 
