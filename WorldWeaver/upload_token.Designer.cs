@@ -36,6 +36,7 @@
             this.btn_tokenFilePicker = new System.Windows.Forms.Button();
             this.img_tokenPreview = new System.Windows.Forms.PictureBox();
             this.btn_submit = new System.Windows.Forms.Button();
+            this.btn_MainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_tokenPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,11 +116,22 @@
             this.btn_submit.UseVisualStyleBackColor = true;
             this.btn_submit.Click += new System.EventHandler(this.btn_submit_Click);
             // 
+            // btn_MainMenu
+            // 
+            this.btn_MainMenu.Location = new System.Drawing.Point(30, 13);
+            this.btn_MainMenu.Name = "btn_MainMenu";
+            this.btn_MainMenu.Size = new System.Drawing.Size(76, 33);
+            this.btn_MainMenu.TabIndex = 8;
+            this.btn_MainMenu.Text = "Main Menu";
+            this.btn_MainMenu.UseVisualStyleBackColor = true;
+            this.btn_MainMenu.Click += new System.EventHandler(this.btn_MainMenu_Click);
+            // 
             // upload_token
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_MainMenu);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.img_tokenPreview);
             this.Controls.Add(this.btn_tokenFilePicker);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button btn_tokenFilePicker;
         private System.Windows.Forms.PictureBox img_tokenPreview;
         private System.Windows.Forms.Button btn_submit;
+        private System.Windows.Forms.Button btn_MainMenu;
     }
 }
