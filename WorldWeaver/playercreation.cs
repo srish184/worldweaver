@@ -51,7 +51,7 @@ namespace WorldWeaver
 
             }
 
-            
+            //create if else for textbox and display error if empty
 
 
             var result = MessageBox.Show("Stats Saved!");
