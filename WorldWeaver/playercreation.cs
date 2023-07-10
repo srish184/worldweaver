@@ -19,53 +19,98 @@ namespace WorldWeaver
         public playercreation()
         {
             InitializeComponent();
-        }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            //Copy and paste your own data source
-            string connectionString = @"Data Source=DESKTOP-CD77NKS\SQLEXPRESS;Initial Catalog=worldweaver;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            string query = "INSERT INTO stats (hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, proficiency_bonus, walking_speed, initiative, armor_class) VALUES ('" + textBox5.Text + "', '" + textBox6.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "', '" + textBox12.Text + "', '" + textBox13.Text + "', '" + textBox14.Text + "', '" + textBox15.Text + "')";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
+            
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO stats (hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, proficiency_bonus, walking_speed, initiative, armor_class) VALUES (@hp, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @proficiencyBonus, @walkingSpeed, @initiative, @armorClass)", conn))
+                {
+                    cmd.Parameters.Add("@hp", SqlDbType.Int).Value = hpBox.Text;
+                    cmd.Parameters.Add("@strength", SqlDbType.Int).Value = strBox.Text;
+                    cmd.Parameters.Add("@dexterity", SqlDbType.Int).Value = dexBox.Text;
+                    cmd.Parameters.Add("@constitution", SqlDbType.Int).Value = conBox.Text;
+                    cmd.Parameters.Add("@intelligence", SqlDbType.Int).Value = inteBox.Text;
+                    cmd.Parameters.Add  ("@wisdom", SqlDbType.Int).Value = wisBox.Text;
+                    cmd.Parameters.Add("@charisma", SqlDbType.Int).Value = chaBox.Text;
+                    cmd.Parameters.Add("@proficiencyBonus", SqlDbType.Int).Value = pbBox.Text;
+                    cmd.Parameters.Add("@walkingSpeed", SqlDbType.Int).Value = wsBox.Text;
+                    cmd.Parameters.Add("@initiative", SqlDbType.Int).Value = initBox.Text;
+                    cmd.Parameters.Add("@armorClass", SqlDbType.Int).Value = acBox.Text;
+                    
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+
+            
+
+
+            var result = MessageBox.Show("Stats Saved!");
+            
+
             
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void sbmtBtn_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=DESKTOP-CD77NKS\SQLEXPRESS;Initial Catalog=worldweaver;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
-            string query = "INSERT INTO player (notes_to_dm) VALUES ('" + textBox16.Text + "')";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
+            using(SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO player (notes_to_dm) VALUES(@notesToDM)", conn))
+                {
+                    cmd.Parameters.Add("@notesToDM", SqlDbType.NVarChar, 255).Value = notesBox.Text;
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            var result = MessageBox.Show("A note has been sent to your DM!");
+
+            
         }
 
         private void schara_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=DESKTOP-CD77NKS\SQLEXPRESS;Initial Catalog=worldweaver;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            string query = "INSERT INTO player (player_name, race, level, class) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', " + textBox3.Text + ", '" + textBox4.Text + "')";
-            SqlCommand command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+
+            using (SqlConnection conn  = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO player (player_name, race, level, class) VALUES(@playerName, @race, @level, @clas)", conn))
+                {
+                    cmd.Parameters.Add("@playerName", SqlDbType.NVarChar, 255).Value = pnameBox.Text;
+                    cmd.Parameters.Add("@race", SqlDbType.NVarChar, 255).Value = raceBox.Text;
+                    cmd.Parameters.Add("@level", SqlDbType.Int).Value = lvlBox.Text;
+                    cmd.Parameters.Add("@clas", SqlDbType.NVarChar, 255).Value = clsBox.Text;
+
+                    cmd.ExecuteNonQuery();
+                }
+                
+            }
+
+            var result = MessageBox.Show("Character saved!");
 
         }
+
+        private void playercreation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

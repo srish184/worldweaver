@@ -36,18 +36,20 @@ namespace WorldWeaver
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(110, 256);
+            this.btnLoad.Location = new System.Drawing.Point(165, 394);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.Size = new System.Drawing.Size(112, 35);
             this.btnLoad.TabIndex = 0;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
             // 
             // btnMain
             // 
-            this.btnMain.Location = new System.Drawing.Point(260, 256);
+            this.btnMain.Location = new System.Drawing.Point(390, 394);
+            this.btnMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMain.Name = "btnMain";
-            this.btnMain.Size = new System.Drawing.Size(75, 23);
+            this.btnMain.Size = new System.Drawing.Size(112, 35);
             this.btnMain.TabIndex = 1;
             this.btnMain.Text = "Main Menu";
             this.btnMain.UseVisualStyleBackColor = true;
@@ -56,21 +58,25 @@ namespace WorldWeaver
             // LBLoadGame
             // 
             this.LBLoadGame.FormattingEnabled = true;
-            this.LBLoadGame.Location = new System.Drawing.Point(110, 62);
+            this.LBLoadGame.ItemHeight = 20;
+            this.LBLoadGame.Location = new System.Drawing.Point(165, 95);
+            this.LBLoadGame.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LBLoadGame.Name = "LBLoadGame";
-            this.LBLoadGame.Size = new System.Drawing.Size(120, 95);
+            this.LBLoadGame.Size = new System.Drawing.Size(178, 144);
             this.LBLoadGame.TabIndex = 2;
             // 
             // LoadGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 332);
+            this.ClientSize = new System.Drawing.Size(672, 511);
             this.Controls.Add(this.LBLoadGame);
             this.Controls.Add(this.btnMain);
             this.Controls.Add(this.btnLoad);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoadGame";
             this.Text = "Load Game ";
+            this.Load += new System.EventHandler(this.LoadGame_Load);
             this.ResumeLayout(false);
 
         }

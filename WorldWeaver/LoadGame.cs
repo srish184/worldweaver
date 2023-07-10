@@ -23,5 +23,10 @@ namespace WorldWeaver
             main_menu.Show();
             this.Hide();
         }
+
+        private void LoadGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
