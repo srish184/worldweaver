@@ -76,3 +76,4 @@ C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\World
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.worldform.resources
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.NPCForm.resources
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.worldform.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.create_campaign.resources
