@@ -178,5 +178,11 @@ namespace WorldWeaver
         {
 
         }
+
+        private void btn_MainMenu_Click(object sender, EventArgs e)
+        {
+           //Return to main menu
+            ReturnToMainMenu();
+        }
     }
 }
