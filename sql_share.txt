@@ -52,24 +52,22 @@ CREATE TABLE stats(
 *********************************************
 table name: npc
 CREATE TABLE npc(
-	npc_id INT IDENTITY (1,1) NOT NULL,
-	name NVARCHAR(255),
-	race NVARCHAR(255),
-	level INT,
-	class NVARCHAR(255),
-	hit_points INT,
-	strength INT,
-	dexterity INT,
-	constitution INT,
-	intelligence INT,
-	wisdom INT,
-	charisma INT,
-	proficiency_bonus INT,
-	walking_speed INT,
-	initiative INT,
-	armor_class INT,
-	character_notes NVARCHAR(255)
-	);
+    npc_id INT IDENTITY (1,1) NOT NULL,
+    name NVARCHAR(255),
+    race NVARCHAR(255),
+    class NVARCHAR(255),
+    hit_points INT,
+    strength INT,
+    dexterity INT,
+    constitution INT,
+    intelligence INT,
+    wisdom INT,
+    charisma INT,
+    armor_class INT,
+    character_notes NVARCHAR(255),
+    skills NVARCHAR(255),
+    abilities NVARCHAR(255),
+    attacks NVARCHAR(255)
 
 *********************************************
 table name: tokens
