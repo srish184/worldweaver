@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="create_campaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_campaign.Designer.cs">
+      <DependentUpon>create_campaign.cs</DependentUpon>
+    </Compile>
     <Compile Include="world.cs">
       <SubType>Form</SubType>
     </Compile>

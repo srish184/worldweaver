@@ -25,8 +25,9 @@ namespace WorldWeaver
         }
 
         private void BtnNewGame_Click(object sender, EventArgs e)
+        //note, new game is a previous iteration. The button now links to creating character types
         {
-
+            
             RolesForm RolesForm = new RolesForm();
             RolesForm.Show();
                 this.Hide();
@@ -51,6 +52,13 @@ namespace WorldWeaver
         private void main_menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_createCampaign_Click(object sender, EventArgs e)
+        {
+            create_campaign createCampaignForm = new create_campaign();
+            createCampaignForm.Show();
+            this.Hide();
         }
     }
 }

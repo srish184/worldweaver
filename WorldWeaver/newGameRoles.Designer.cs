@@ -36,19 +36,19 @@ namespace WorldWeaver
             // 
             // butDM
             // 
-            this.butDM.Location = new System.Drawing.Point(56, 78);
+            this.butDM.Location = new System.Drawing.Point(60, 84);
             this.butDM.Name = "butDM";
-            this.butDM.Size = new System.Drawing.Size(109, 23);
+            this.butDM.Size = new System.Drawing.Size(81, 41);
             this.butDM.TabIndex = 0;
-            this.butDM.Text = "Dungeon Master ";
+            this.butDM.Text = "NPC";
             this.butDM.UseVisualStyleBackColor = true;
             this.butDM.Click += new System.EventHandler(this.butDM_Click);
             // 
             // BtlPlayer
             // 
-            this.BtlPlayer.Location = new System.Drawing.Point(56, 131);
+            this.BtlPlayer.Location = new System.Drawing.Point(160, 84);
             this.BtlPlayer.Name = "BtlPlayer";
-            this.BtlPlayer.Size = new System.Drawing.Size(75, 23);
+            this.BtlPlayer.Size = new System.Drawing.Size(75, 41);
             this.BtlPlayer.TabIndex = 1;
             this.BtlPlayer.Text = "Player ";
             this.BtlPlayer.UseVisualStyleBackColor = true;
@@ -57,11 +57,12 @@ namespace WorldWeaver
             // lblslect
             // 
             this.lblslect.AutoSize = true;
+            this.lblslect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblslect.Location = new System.Drawing.Point(56, 31);
             this.lblslect.Name = "lblslect";
-            this.lblslect.Size = new System.Drawing.Size(161, 13);
+            this.lblslect.Size = new System.Drawing.Size(179, 20);
             this.lblslect.TabIndex = 2;
-            this.lblslect.Text = "select your role for this campaign";
+            this.lblslect.Text = "Select a Character Type";
             // 
             // RolesForm
             // 
