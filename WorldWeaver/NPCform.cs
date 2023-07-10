@@ -11,6 +11,7 @@ using System.IO;
 using System.Configuration;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace WorldWeaver
 {
@@ -21,20 +22,6 @@ namespace WorldWeaver
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -43,90 +30,172 @@ namespace WorldWeaver
             this.Hide();
         }
 
-        private void btnContinue_Click(object sender, EventArgs e)
-        {
-            // building this next 
-            //  play area
-        }
         private void ClearForm()
         {
-            /*foreach (Control control in this.Controls)
+            ClearControls(this);
+        }
+        //clear out the form for reoccuring entry 
+        private void ClearControls(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
             {
-                if (control is TextBox)
+                if (control is TextBox textBox)
                 {
-                    TextBox textBox = (TextBox)control;
                     textBox.Text = string.Empty;
                 }
-                else if (control is RichTextBox)
+                else if (control is RichTextBox richTextBox)
                 {
-                    RichTextBox richTextBox = (RichTextBox)control;
                     richTextBox.Clear();
                 }
-            }*/
+                else if (control.HasChildren)
+                {
+                    ClearControls(control); // Recursively clear child controls
+                }
+            }
         }
         private void btnSaveNPC_Click(object sender, EventArgs e)
         {
-            string name = npcnameBox.Text;
-            string race = txtbxRace.Text;
-            string CNotes = rtbxCharacterNotes.Text;
-            string skills = rtbxSkills.Text;
-            string abilities = rtbxAbilities.Text;
-            string attacks = rtbxAttacks.Text;
-
-            int STR = int.Parse(txtbxSTR.Text);
-            int CHA = int.Parse(txtbxCHA.Text);
-            int CON = int.Parse(txtbxCON.Text);
-            int DEX = int.Parse(textBxDEX.Text);
-            int INT = int.Parse(txtbxINT.Text);
-            int WIS = int.Parse(txtBxWIS.Text);
-            int HP = int.Parse(txtbxHP.Text);
-            int AC = int.Parse(textBxAC.Text);
-
-            var result = MessageBox.Show("NPC saved successfully! Do you want to make another one?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (result == DialogResult.Yes)
+            if (string.IsNullOrEmpty(txtbxSTR.Text))
             {
-                // Clear the form and allow the user to add another token
-                ClearForm();
+
+                MessageBox.Show("Please fill out the Strength stat.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            else if (result == DialogResult.No)
+            else if (string.IsNullOrEmpty(npcnameBox.Text))
             {
-                // Return to the main menu
-                worldform worldForm = new worldform();
-                worldForm.Show();
-                this.Hide();
+
+                MessageBox.Show("Please name the NPC.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(txtbxRace.Text))
+            {
+
+                MessageBox.Show("what kind of person or monster is this please fill out race.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(txtbxCHA.Text))
+            {
+
+                MessageBox.Show("Please fill out the charisma stat.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(txtbxCON.Text))
+            {
+
+                MessageBox.Show("Please fill out the constitution stat.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(textBxDEX.Text))
+            {
+
+                MessageBox.Show("Please fill out the dexterity stat.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(txtbxINT.Text))
+            {
+
+                MessageBox.Show("Please fill out the intelligence stat.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(txtBxWIS.Text))
+            {
+
+                MessageBox.Show("Please fill out the wisdom stat.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(txtbxHP.Text))
+            {
+
+                MessageBox.Show("Please fill out the hp for the NPC.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (string.IsNullOrEmpty(txtbxAC.Text))
+            {
+
+                MessageBox.Show("even a naked NPC has an ac (armor class) please wright one in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
-            // add everything to the database then clear out the form to add more information
-            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            else
             {
-                connection.Open();
 
-                using (SqlCommand command = new SqlCommand("INSERT INTO npc (name, race, strength, dexterity, constitution, intelligence, wisdom, charisma, hit_points, armor_class, character_notes, skills, abilities, attacks) VALUES (@name, @race, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @hitPoints, @armorClass, @characterNotes, @skills, @abilities, @attacks)", connection))
+
+                string name = npcnameBox.Text;
+                string race = txtbxRace.Text;
+                string CNotes = rtbxCharacterNotes.Text;
+                string skills = rtbxSkills.Text;
+                string abilities = rtbxAbilities.Text;
+                string attacks = rtbxAttacks.Text;
+
+                int STR = int.Parse(txtbxSTR.Text);
+                int CHA = int.Parse(txtbxCHA.Text);
+                int CON = int.Parse(txtbxCON.Text);
+                int DEX = int.Parse(textBxDEX.Text);
+                int INT = int.Parse(txtbxINT.Text);
+                int WIS = int.Parse(txtBxWIS.Text);
+                int HP = int.Parse(txtbxHP.Text);
+                int AC = int.Parse(textBxAC.Text);
+
+                // Check if the text box is empty
+                if (string.IsNullOrEmpty(txtbxSTR.Text))
                 {
-                    command.Parameters.AddWithValue("@name", name);
-                    command.Parameters.AddWithValue("@race", race);
-                    // command.Parameters.AddWithValue("@",level); do not need
-                    // command.Parameters.AddWithValue("@",class); do not need
-                    command.Parameters.AddWithValue("@strength", STR);
-                    command.Parameters.AddWithValue("@dexterity", DEX);
-                    command.Parameters.AddWithValue("@constitution", CON);
-                    command.Parameters.AddWithValue("@intelligence", INT);
-                    command.Parameters.AddWithValue("@wisdom", WIS);
-                    command.Parameters.AddWithValue("@charisma", CHA);
-                    //command.Parameters.AddWithValue("@"proficiency_bonus); do not need
-                    //   command.Parameters.AddWithValue("@walking_speed); do not need
-                    //   command.Parameters.AddWithValue("@initiative); do not need
-                    command.Parameters.AddWithValue("@hitPoints", HP);
-                    command.Parameters.AddWithValue("@armorClass", AC);
-                    command.Parameters.AddWithValue("@characterNotes", CNotes);
-                    // stuff that needes added to database 
-                    command.Parameters.AddWithValue("@skills", skills);
-                    command.Parameters.AddWithValue("@abilities", abilities);
-                    command.Parameters.AddWithValue("@attacks", attacks);
 
-                    command.ExecuteNonQuery();
+                    MessageBox.Show("Please fill out the Strength stat.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                //else if()
+                {
+
+                }
+
+
+                var result = MessageBox.Show("NPC saved successfully! Do you want to make another one?", "Success", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    // Clear the form and allow the user to add another token
+                    ClearForm();
+                }
+                else if (result == DialogResult.No)
+                {
+                    // Return to the main menu
+                    worldform worldForm = new worldform();
+                    worldForm.Show();
+                    this.Hide();
+                }
+
+
+
+
+                // add everything to the database then clear out the form to add more information
+                string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("INSERT INTO npc (name, race, strength, dexterity, constitution, intelligence, wisdom, charisma, hit_points, armor_class, character_notes, skills, abilities, attacks) VALUES (@name, @race, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @hitPoints, @armorClass, @characterNotes, @skills, @abilities, @attacks)", connection))
+                    {
+                        command.Parameters.AddWithValue("@name", name);
+                        command.Parameters.AddWithValue("@race", race);
+
+                        command.Parameters.AddWithValue("@strength", STR);
+                        command.Parameters.AddWithValue("@dexterity", DEX);
+                        command.Parameters.AddWithValue("@constitution", CON);
+                        command.Parameters.AddWithValue("@intelligence", INT);
+                        command.Parameters.AddWithValue("@wisdom", WIS);
+                        command.Parameters.AddWithValue("@charisma", CHA);
+
+                        command.Parameters.AddWithValue("@hitPoints", HP);
+                        command.Parameters.AddWithValue("@armorClass", AC);
+                        command.Parameters.AddWithValue("@characterNotes", CNotes);
+
+                        command.Parameters.AddWithValue("@skills", skills);
+                        command.Parameters.AddWithValue("@abilities", abilities);
+                        command.Parameters.AddWithValue("@attacks", attacks);
+
+                        command.ExecuteNonQuery();
+                    }
                 }
             }
         }
@@ -230,6 +299,18 @@ namespace WorldWeaver
         {
         }
         private void NPCForm_Load(object sender, EventArgs e)
+        {
+        }
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+        private void richTextBox5_TextChanged(object sender, EventArgs e)
         {
         }
     }
