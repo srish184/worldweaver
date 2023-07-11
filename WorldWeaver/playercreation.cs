@@ -106,39 +106,42 @@ namespace WorldWeaver
             {
                 MessageBox.Show("Unless you're completely naked, please fill out the armor class!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+
+            else
             {
-                conn.Open();
+                string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO stats (hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, proficiency_bonus, walking_speed, initiative, armor_class) VALUES (@hp, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @proficiencyBonus, @walkingSpeed, @initiative, @armorClass)", conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    cmd.Parameters.Add("@hp", SqlDbType.Int).Value = hpBox.Text;
-                    cmd.Parameters.Add("@strength", SqlDbType.Int).Value = strBox.Text;
-                    cmd.Parameters.Add("@dexterity", SqlDbType.Int).Value = dexBox.Text;
-                    cmd.Parameters.Add("@constitution", SqlDbType.Int).Value = conBox.Text;
-                    cmd.Parameters.Add("@intelligence", SqlDbType.Int).Value = inteBox.Text;
-                    cmd.Parameters.Add  ("@wisdom", SqlDbType.Int).Value = wisBox.Text;
-                    cmd.Parameters.Add("@charisma", SqlDbType.Int).Value = chaBox.Text;
-                    cmd.Parameters.Add("@proficiencyBonus", SqlDbType.Int).Value = pbBox.Text;
-                    cmd.Parameters.Add("@walkingSpeed", SqlDbType.Int).Value = wsBox.Text;
-                    cmd.Parameters.Add("@initiative", SqlDbType.Int).Value = initBox.Text;
-                    cmd.Parameters.Add("@armorClass", SqlDbType.Int).Value = acBox.Text;
-                    
-                    cmd.ExecuteNonQuery();
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO stats (hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, proficiency_bonus, walking_speed, initiative, armor_class) VALUES (@hp, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @proficiencyBonus, @walkingSpeed, @initiative, @armorClass)", conn))
+                    {
+                        cmd.Parameters.Add("@hp", SqlDbType.Int).Value = hpBox.Text;
+                        cmd.Parameters.Add("@strength", SqlDbType.Int).Value = strBox.Text;
+                        cmd.Parameters.Add("@dexterity", SqlDbType.Int).Value = dexBox.Text;
+                        cmd.Parameters.Add("@constitution", SqlDbType.Int).Value = conBox.Text;
+                        cmd.Parameters.Add("@intelligence", SqlDbType.Int).Value = inteBox.Text;
+                        cmd.Parameters.Add("@wisdom", SqlDbType.Int).Value = wisBox.Text;
+                        cmd.Parameters.Add("@charisma", SqlDbType.Int).Value = chaBox.Text;
+                        cmd.Parameters.Add("@proficiencyBonus", SqlDbType.Int).Value = pbBox.Text;
+                        cmd.Parameters.Add("@walkingSpeed", SqlDbType.Int).Value = wsBox.Text;
+                        cmd.Parameters.Add("@initiative", SqlDbType.Int).Value = initBox.Text;
+                        cmd.Parameters.Add("@armorClass", SqlDbType.Int).Value = acBox.Text;
+
+                        cmd.ExecuteNonQuery();
+                    }
+
                 }
 
+                //create if else for textbox and display error if empty
+
+
+                var result = MessageBox.Show("Stats Saved!");
+               
+
             }
-
-            //create if else for textbox and display error if empty
-
-
-            var result = MessageBox.Show("Stats Saved!");
-            
-
-            
         }
 
        
@@ -147,21 +150,29 @@ namespace WorldWeaver
         {
             //Notes are optional
 
-            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+                string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
-            using(SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO player (notes_to_dm) VALUES(@notesToDM)", conn))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    cmd.Parameters.Add("@notesToDM", SqlDbType.NVarChar, 255).Value = notesBox.Text;
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO player (notes_to_dm) VALUES(@notesToDM)", conn))
+                    {
+                        cmd.Parameters.Add("@notesToDM", SqlDbType.NVarChar, 255).Value = notesBox.Text;
 
-                    cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
+                    }
                 }
-            }
 
-            var result = MessageBox.Show("A note has been sent to your DM!");
-
+                var result = MessageBox.Show("Notes/Complaints sent to your DM", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (result == DialogResult.OK)
+                {
+                    ClearForm();
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    ClearForm();
+                }
+            
             
         }
 
@@ -211,7 +222,7 @@ namespace WorldWeaver
 
 
                 }
-                var result = MessageBox.Show("Character saved! Create another?", "Succes!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                var result = MessageBox.Show("Character saved! Create another?", "Success!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
                     ClearForm();
@@ -230,6 +241,170 @@ namespace WorldWeaver
 
         }
 
-        
+        private void pnameBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void raceBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvlBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        //textbox prevents strings from being entered
+        private void lvlBox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void hpBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void hpBox_KeyPress_2(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void strBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void strBox_KeyPress_3(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dexBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dexBox_KeyPress_4(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void conBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void conBox_KeyPress_5(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void inteBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inteBox_KeyPress_6(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void wisBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wisBox_KeyPress_7(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void chaBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chaBox_KeyPress_8(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void pbBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbBox_KeyPress_9(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void wsBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wsBox_KeyPress_10(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void initBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void initBox_KeyPress_11(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void acBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void acBox_KeyPress_12(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

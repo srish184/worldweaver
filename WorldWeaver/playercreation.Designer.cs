@@ -225,6 +225,7 @@
             this.raceBox.Name = "raceBox";
             this.raceBox.Size = new System.Drawing.Size(100, 26);
             this.raceBox.TabIndex = 18;
+            this.raceBox.TextChanged += new System.EventHandler(this.raceBox_TextChanged);
             // 
             // lvlBox
             // 
@@ -232,6 +233,8 @@
             this.lvlBox.Name = "lvlBox";
             this.lvlBox.Size = new System.Drawing.Size(100, 26);
             this.lvlBox.TabIndex = 19;
+            this.lvlBox.TextChanged += new System.EventHandler(this.lvlBox_TextChanged);
+            this.lvlBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.lvlBox_KeyPress_1);
             // 
             // clsBox
             // 
@@ -246,6 +249,8 @@
             this.hpBox.Name = "hpBox";
             this.hpBox.Size = new System.Drawing.Size(100, 26);
             this.hpBox.TabIndex = 21;
+            this.hpBox.TextChanged += new System.EventHandler(this.hpBox_TextChanged);
+            this.hpBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hpBox_KeyPress_2);
             // 
             // strBox
             // 
@@ -253,6 +258,8 @@
             this.strBox.Name = "strBox";
             this.strBox.Size = new System.Drawing.Size(100, 26);
             this.strBox.TabIndex = 22;
+            this.strBox.TextChanged += new System.EventHandler(this.strBox_TextChanged);
+            this.strBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.strBox_KeyPress_3);
             // 
             // dexBox
             // 
@@ -260,6 +267,8 @@
             this.dexBox.Name = "dexBox";
             this.dexBox.Size = new System.Drawing.Size(100, 26);
             this.dexBox.TabIndex = 23;
+            this.dexBox.TextChanged += new System.EventHandler(this.dexBox_TextChanged);
+            this.dexBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dexBox_KeyPress_4);
             // 
             // conBox
             // 
@@ -267,6 +276,8 @@
             this.conBox.Name = "conBox";
             this.conBox.Size = new System.Drawing.Size(100, 26);
             this.conBox.TabIndex = 24;
+            this.conBox.TextChanged += new System.EventHandler(this.conBox_TextChanged);
+            this.conBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.conBox_KeyPress_5);
             // 
             // inteBox
             // 
@@ -274,6 +285,8 @@
             this.inteBox.Name = "inteBox";
             this.inteBox.Size = new System.Drawing.Size(100, 26);
             this.inteBox.TabIndex = 25;
+            this.inteBox.TextChanged += new System.EventHandler(this.inteBox_TextChanged);
+            this.inteBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inteBox_KeyPress_6);
             // 
             // wisBox
             // 
@@ -281,6 +294,8 @@
             this.wisBox.Name = "wisBox";
             this.wisBox.Size = new System.Drawing.Size(100, 26);
             this.wisBox.TabIndex = 26;
+            this.wisBox.TextChanged += new System.EventHandler(this.wisBox_TextChanged);
+            this.wisBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.wisBox_KeyPress_7);
             // 
             // chaBox
             // 
@@ -288,6 +303,8 @@
             this.chaBox.Name = "chaBox";
             this.chaBox.Size = new System.Drawing.Size(100, 26);
             this.chaBox.TabIndex = 27;
+            this.chaBox.TextChanged += new System.EventHandler(this.chaBox_TextChanged);
+            this.chaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chaBox_KeyPress_8);
             // 
             // pbBox
             // 
@@ -295,6 +312,8 @@
             this.pbBox.Name = "pbBox";
             this.pbBox.Size = new System.Drawing.Size(100, 26);
             this.pbBox.TabIndex = 28;
+            this.pbBox.TextChanged += new System.EventHandler(this.pbBox_TextChanged);
+            this.pbBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pbBox_KeyPress_9);
             // 
             // wsBox
             // 
@@ -302,6 +321,8 @@
             this.wsBox.Name = "wsBox";
             this.wsBox.Size = new System.Drawing.Size(100, 26);
             this.wsBox.TabIndex = 29;
+            this.wsBox.TextChanged += new System.EventHandler(this.wsBox_TextChanged);
+            this.wsBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.wsBox_KeyPress_10);
             // 
             // initBox
             // 
@@ -309,6 +330,8 @@
             this.initBox.Name = "initBox";
             this.initBox.Size = new System.Drawing.Size(100, 26);
             this.initBox.TabIndex = 30;
+            this.initBox.TextChanged += new System.EventHandler(this.initBox_TextChanged);
+            this.initBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.initBox_KeyPress_11);
             // 
             // acBox
             // 
@@ -316,6 +339,8 @@
             this.acBox.Name = "acBox";
             this.acBox.Size = new System.Drawing.Size(100, 26);
             this.acBox.TabIndex = 31;
+            this.acBox.TextChanged += new System.EventHandler(this.acBox_TextChanged);
+            this.acBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.acBox_KeyPress_12);
             // 
             // notesBox
             // 
@@ -351,6 +376,7 @@
             this.pnameBox.Name = "pnameBox";
             this.pnameBox.Size = new System.Drawing.Size(100, 26);
             this.pnameBox.TabIndex = 35;
+            this.pnameBox.TextChanged += new System.EventHandler(this.pnameBox_TextChanged);
             // 
             // schara
             // 
