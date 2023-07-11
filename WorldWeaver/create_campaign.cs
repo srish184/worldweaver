@@ -83,6 +83,10 @@ namespace WorldWeaver
                     playerNames.Add(playerName);
                 }
 
+                reader.Close();
+
+                playerNames.Insert(0, "Select");
+
                 cmb_player1.DataSource = playerNames.ToList();
                 cmb_player2.DataSource = playerNames.ToList();
                 cmb_player3.DataSource = playerNames.ToList();
@@ -90,15 +94,7 @@ namespace WorldWeaver
                 cmb_player5.DataSource = playerNames.ToList();
                 cmb_player6.DataSource = playerNames.ToList();
 
-                // Set the default text for each combo box
-                cmb_player1.Text = "---select player---";
-                cmb_player2.Text = "---select player---";
-                cmb_player3.Text = "---select player---";
-                cmb_player4.Text = "---select player---";
-                cmb_player5.Text = "---select player---";
-                cmb_player6.Text = "---select player---";
-
-                reader.Close();
+                
             }
         }
 
