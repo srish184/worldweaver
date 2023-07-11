@@ -23,6 +23,8 @@ namespace WorldWeaver
             connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
             PopulateMapDropdown();
+            SetPlayerCountComboBox();
+            PopulatePlayerComboBoxes();
         }
 
         private void PopulateMapDropdown()
@@ -37,6 +39,9 @@ namespace WorldWeaver
 
                 List<string> mapNames = new List<string>();
 
+                // Add the default option "--select map--" to the list
+                mapNames.Add("---select map---");
+
                 while (reader.Read())
                 {
                     string mapName = reader.GetString(0);
@@ -48,6 +53,54 @@ namespace WorldWeaver
 
                 reader.Close();
             }
+
+            // Set the selected index to 0 to display "--select map--" as the default value
+            cmbMaps.SelectedIndex = 0;
         }
+
+
+        private void SetPlayerCountComboBox()
+        {
+            List<int> playerCounts = Enumerable.Range(1, 6).ToList();
+            cmbPlayerCount.DataSource = playerCounts;
+        }
+
+        private void PopulatePlayerComboBoxes()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT name FROM player WHERE name IS NOT NULL";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                List<string> playerNames = new List<string>();
+
+                while (reader.Read())
+                {
+                    string playerName = reader.GetString(0);
+                    playerNames.Add(playerName);
+                }
+
+                cmb_player1.DataSource = playerNames.ToList();
+                cmb_player2.DataSource = playerNames.ToList();
+                cmb_player3.DataSource = playerNames.ToList();
+                cmb_player4.DataSource = playerNames.ToList();
+                cmb_player5.DataSource = playerNames.ToList();
+                cmb_player6.DataSource = playerNames.ToList();
+
+                // Set the default text for each combo box
+                cmb_player1.Text = "---select player---";
+                cmb_player2.Text = "---select player---";
+                cmb_player3.Text = "---select player---";
+                cmb_player4.Text = "---select player---";
+                cmb_player5.Text = "---select player---";
+                cmb_player6.Text = "---select player---";
+
+                reader.Close();
+            }
+        }
+
     }
 }
