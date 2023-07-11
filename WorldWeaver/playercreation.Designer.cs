@@ -69,300 +69,267 @@
             // pname
             // 
             this.pname.AutoSize = true;
-            this.pname.Location = new System.Drawing.Point(34, 113);
-            this.pname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pname.Location = new System.Drawing.Point(51, 174);
             this.pname.Name = "pname";
-            this.pname.Size = new System.Drawing.Size(67, 13);
+            this.pname.Size = new System.Drawing.Size(98, 20);
             this.pname.TabIndex = 0;
             this.pname.Text = "Player Name";
             // 
             // raceLa
             // 
             this.raceLa.AutoSize = true;
-            this.raceLa.Location = new System.Drawing.Point(34, 166);
-            this.raceLa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.raceLa.Location = new System.Drawing.Point(51, 255);
             this.raceLa.Name = "raceLa";
-            this.raceLa.Size = new System.Drawing.Size(33, 13);
+            this.raceLa.Size = new System.Drawing.Size(47, 20);
             this.raceLa.TabIndex = 1;
             this.raceLa.Text = "Race";
             // 
             // levelL
             // 
             this.levelL.AutoSize = true;
-            this.levelL.Location = new System.Drawing.Point(34, 223);
-            this.levelL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.levelL.Location = new System.Drawing.Point(51, 343);
             this.levelL.Name = "levelL";
-            this.levelL.Size = new System.Drawing.Size(33, 13);
+            this.levelL.Size = new System.Drawing.Size(46, 20);
             this.levelL.TabIndex = 2;
             this.levelL.Text = "Level";
             // 
             // classL
             // 
             this.classL.AutoSize = true;
-            this.classL.Location = new System.Drawing.Point(34, 276);
-            this.classL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.classL.Location = new System.Drawing.Point(51, 425);
             this.classL.Name = "classL";
-            this.classL.Size = new System.Drawing.Size(32, 13);
+            this.classL.Size = new System.Drawing.Size(48, 20);
             this.classL.TabIndex = 3;
             this.classL.Text = "Class";
             // 
             // notesDM
             // 
             this.notesDM.AutoSize = true;
-            this.notesDM.Location = new System.Drawing.Point(290, 113);
-            this.notesDM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.notesDM.Location = new System.Drawing.Point(435, 174);
             this.notesDM.Name = "notesDM";
-            this.notesDM.Size = new System.Drawing.Size(71, 13);
+            this.notesDM.Size = new System.Drawing.Size(102, 20);
             this.notesDM.TabIndex = 4;
             this.notesDM.Text = "Notes To DM";
             // 
             // statsL
             // 
             this.statsL.AutoSize = true;
-            this.statsL.Location = new System.Drawing.Point(34, 341);
-            this.statsL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.statsL.Location = new System.Drawing.Point(51, 525);
             this.statsL.Name = "statsL";
-            this.statsL.Size = new System.Drawing.Size(34, 13);
+            this.statsL.Size = new System.Drawing.Size(51, 20);
             this.statsL.TabIndex = 5;
             this.statsL.Text = "Stats:";
             // 
             // hpL
             // 
             this.hpL.AutoSize = true;
-            this.hpL.Location = new System.Drawing.Point(34, 391);
-            this.hpL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hpL.Location = new System.Drawing.Point(51, 602);
             this.hpL.Name = "hpL";
-            this.hpL.Size = new System.Drawing.Size(22, 13);
+            this.hpL.Size = new System.Drawing.Size(31, 20);
             this.hpL.TabIndex = 6;
             this.hpL.Text = "HP";
             // 
             // dexL
             // 
             this.dexL.AutoSize = true;
-            this.dexL.Location = new System.Drawing.Point(34, 487);
-            this.dexL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dexL.Location = new System.Drawing.Point(51, 749);
             this.dexL.Name = "dexL";
-            this.dexL.Size = new System.Drawing.Size(48, 13);
+            this.dexL.Size = new System.Drawing.Size(71, 20);
             this.dexL.TabIndex = 7;
             this.dexL.Text = "Dexterity";
             // 
             // constL
             // 
             this.constL.AutoSize = true;
-            this.constL.Location = new System.Drawing.Point(34, 532);
-            this.constL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.constL.Location = new System.Drawing.Point(51, 818);
             this.constL.Name = "constL";
-            this.constL.Size = new System.Drawing.Size(62, 13);
+            this.constL.Size = new System.Drawing.Size(94, 20);
             this.constL.TabIndex = 8;
             this.constL.Text = "Constitution";
             // 
             // intelL
             // 
             this.intelL.AutoSize = true;
-            this.intelL.Location = new System.Drawing.Point(34, 583);
-            this.intelL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.intelL.Location = new System.Drawing.Point(51, 897);
             this.intelL.Name = "intelL";
-            this.intelL.Size = new System.Drawing.Size(61, 13);
+            this.intelL.Size = new System.Drawing.Size(90, 20);
             this.intelL.TabIndex = 9;
             this.intelL.Text = "Intelligence";
             // 
             // wisL
             // 
             this.wisL.AutoSize = true;
-            this.wisL.Location = new System.Drawing.Point(34, 625);
-            this.wisL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.wisL.Location = new System.Drawing.Point(51, 962);
             this.wisL.Name = "wisL";
-            this.wisL.Size = new System.Drawing.Size(45, 13);
+            this.wisL.Size = new System.Drawing.Size(66, 20);
             this.wisL.TabIndex = 10;
             this.wisL.Text = "Wisdom";
             // 
             // chaL
             // 
             this.chaL.AutoSize = true;
-            this.chaL.Location = new System.Drawing.Point(290, 391);
-            this.chaL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.chaL.Location = new System.Drawing.Point(435, 602);
             this.chaL.Name = "chaL";
-            this.chaL.Size = new System.Drawing.Size(50, 13);
+            this.chaL.Size = new System.Drawing.Size(76, 20);
             this.chaL.TabIndex = 11;
             this.chaL.Text = "Charisma";
             // 
             // wsL
             // 
             this.wsL.AutoSize = true;
-            this.wsL.Location = new System.Drawing.Point(290, 521);
-            this.wsL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.wsL.Location = new System.Drawing.Point(435, 802);
             this.wsL.Name = "wsL";
-            this.wsL.Size = new System.Drawing.Size(80, 13);
+            this.wsL.Size = new System.Drawing.Size(116, 20);
             this.wsL.TabIndex = 12;
             this.wsL.Text = "Walking Speed";
             // 
             // initiL
             // 
             this.initiL.AutoSize = true;
-            this.initiL.Location = new System.Drawing.Point(290, 577);
-            this.initiL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.initiL.Location = new System.Drawing.Point(435, 888);
             this.initiL.Name = "initiL";
-            this.initiL.Size = new System.Drawing.Size(46, 13);
+            this.initiL.Size = new System.Drawing.Size(67, 20);
             this.initiL.TabIndex = 13;
             this.initiL.Text = "Initiative";
             // 
             // acL
             // 
             this.acL.AutoSize = true;
-            this.acL.Location = new System.Drawing.Point(290, 625);
-            this.acL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.acL.Location = new System.Drawing.Point(435, 962);
             this.acL.Name = "acL";
-            this.acL.Size = new System.Drawing.Size(62, 13);
+            this.acL.Size = new System.Drawing.Size(95, 20);
             this.acL.TabIndex = 14;
             this.acL.Text = "Armor Class";
             // 
             // pbL
             // 
             this.pbL.AutoSize = true;
-            this.pbL.Location = new System.Drawing.Point(290, 454);
-            this.pbL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pbL.Location = new System.Drawing.Point(435, 698);
             this.pbL.Name = "pbL";
-            this.pbL.Size = new System.Drawing.Size(92, 13);
+            this.pbL.Size = new System.Drawing.Size(135, 20);
             this.pbL.TabIndex = 15;
             this.pbL.Text = "Proficiency Bonus";
             // 
             // strL
             // 
             this.strL.AutoSize = true;
-            this.strL.Location = new System.Drawing.Point(34, 441);
-            this.strL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.strL.Location = new System.Drawing.Point(51, 678);
             this.strL.Name = "strL";
-            this.strL.Size = new System.Drawing.Size(47, 13);
+            this.strL.Size = new System.Drawing.Size(71, 20);
             this.strL.TabIndex = 16;
             this.strL.Text = "Strength";
             // 
             // raceBox
             // 
-            this.raceBox.Location = new System.Drawing.Point(37, 192);
-            this.raceBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.raceBox.Location = new System.Drawing.Point(56, 295);
             this.raceBox.Name = "raceBox";
-            this.raceBox.Size = new System.Drawing.Size(68, 20);
+            this.raceBox.Size = new System.Drawing.Size(100, 26);
             this.raceBox.TabIndex = 18;
             // 
             // lvlBox
             // 
-            this.lvlBox.Location = new System.Drawing.Point(37, 244);
-            this.lvlBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lvlBox.Location = new System.Drawing.Point(56, 375);
             this.lvlBox.Name = "lvlBox";
-            this.lvlBox.Size = new System.Drawing.Size(68, 20);
+            this.lvlBox.Size = new System.Drawing.Size(100, 26);
             this.lvlBox.TabIndex = 19;
             // 
             // clsBox
             // 
-            this.clsBox.Location = new System.Drawing.Point(37, 307);
-            this.clsBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clsBox.Location = new System.Drawing.Point(56, 472);
             this.clsBox.Name = "clsBox";
-            this.clsBox.Size = new System.Drawing.Size(68, 20);
+            this.clsBox.Size = new System.Drawing.Size(100, 26);
             this.clsBox.TabIndex = 20;
             // 
             // hpBox
             // 
-            this.hpBox.Location = new System.Drawing.Point(37, 416);
-            this.hpBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hpBox.Location = new System.Drawing.Point(56, 640);
             this.hpBox.Name = "hpBox";
-            this.hpBox.Size = new System.Drawing.Size(68, 20);
+            this.hpBox.Size = new System.Drawing.Size(100, 26);
             this.hpBox.TabIndex = 21;
             // 
             // strBox
             // 
-            this.strBox.Location = new System.Drawing.Point(37, 462);
-            this.strBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.strBox.Location = new System.Drawing.Point(56, 711);
             this.strBox.Name = "strBox";
-            this.strBox.Size = new System.Drawing.Size(68, 20);
+            this.strBox.Size = new System.Drawing.Size(100, 26);
             this.strBox.TabIndex = 22;
             // 
             // dexBox
             // 
-            this.dexBox.Location = new System.Drawing.Point(37, 508);
-            this.dexBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dexBox.Location = new System.Drawing.Point(56, 782);
             this.dexBox.Name = "dexBox";
-            this.dexBox.Size = new System.Drawing.Size(68, 20);
+            this.dexBox.Size = new System.Drawing.Size(100, 26);
             this.dexBox.TabIndex = 23;
             // 
             // conBox
             // 
-            this.conBox.Location = new System.Drawing.Point(37, 556);
-            this.conBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.conBox.Location = new System.Drawing.Point(56, 855);
             this.conBox.Name = "conBox";
-            this.conBox.Size = new System.Drawing.Size(68, 20);
+            this.conBox.Size = new System.Drawing.Size(100, 26);
             this.conBox.TabIndex = 24;
             // 
             // inteBox
             // 
-            this.inteBox.Location = new System.Drawing.Point(37, 606);
-            this.inteBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.inteBox.Location = new System.Drawing.Point(56, 932);
             this.inteBox.Name = "inteBox";
-            this.inteBox.Size = new System.Drawing.Size(68, 20);
+            this.inteBox.Size = new System.Drawing.Size(100, 26);
             this.inteBox.TabIndex = 25;
             // 
             // wisBox
             // 
-            this.wisBox.Location = new System.Drawing.Point(37, 650);
-            this.wisBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wisBox.Location = new System.Drawing.Point(56, 1000);
             this.wisBox.Name = "wisBox";
-            this.wisBox.Size = new System.Drawing.Size(68, 20);
+            this.wisBox.Size = new System.Drawing.Size(100, 26);
             this.wisBox.TabIndex = 26;
             // 
             // chaBox
             // 
-            this.chaBox.Location = new System.Drawing.Point(293, 416);
-            this.chaBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chaBox.Location = new System.Drawing.Point(440, 640);
             this.chaBox.Name = "chaBox";
-            this.chaBox.Size = new System.Drawing.Size(68, 20);
+            this.chaBox.Size = new System.Drawing.Size(100, 26);
             this.chaBox.TabIndex = 27;
             // 
             // pbBox
             // 
-            this.pbBox.Location = new System.Drawing.Point(293, 483);
-            this.pbBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbBox.Location = new System.Drawing.Point(440, 743);
             this.pbBox.Name = "pbBox";
-            this.pbBox.Size = new System.Drawing.Size(68, 20);
+            this.pbBox.Size = new System.Drawing.Size(100, 26);
             this.pbBox.TabIndex = 28;
             // 
             // wsBox
             // 
-            this.wsBox.Location = new System.Drawing.Point(293, 550);
-            this.wsBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wsBox.Location = new System.Drawing.Point(440, 846);
             this.wsBox.Name = "wsBox";
-            this.wsBox.Size = new System.Drawing.Size(68, 20);
+            this.wsBox.Size = new System.Drawing.Size(100, 26);
             this.wsBox.TabIndex = 29;
             // 
             // initBox
             // 
-            this.initBox.Location = new System.Drawing.Point(293, 598);
-            this.initBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.initBox.Location = new System.Drawing.Point(440, 920);
             this.initBox.Name = "initBox";
-            this.initBox.Size = new System.Drawing.Size(68, 20);
+            this.initBox.Size = new System.Drawing.Size(100, 26);
             this.initBox.TabIndex = 30;
             // 
             // acBox
             // 
-            this.acBox.Location = new System.Drawing.Point(293, 650);
-            this.acBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.acBox.Location = new System.Drawing.Point(440, 1000);
             this.acBox.Name = "acBox";
-            this.acBox.Size = new System.Drawing.Size(68, 20);
+            this.acBox.Size = new System.Drawing.Size(100, 26);
             this.acBox.TabIndex = 31;
             // 
             // notesBox
             // 
-            this.notesBox.Location = new System.Drawing.Point(293, 146);
-            this.notesBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.notesBox.Location = new System.Drawing.Point(440, 225);
             this.notesBox.Multiline = true;
             this.notesBox.Name = "notesBox";
-            this.notesBox.Size = new System.Drawing.Size(291, 154);
+            this.notesBox.Size = new System.Drawing.Size(434, 235);
             this.notesBox.TabIndex = 32;
             // 
             // sbmtBtn
             // 
-            this.sbmtBtn.Location = new System.Drawing.Point(421, 326);
-            this.sbmtBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sbmtBtn.Location = new System.Drawing.Point(632, 502);
             this.sbmtBtn.Name = "sbmtBtn";
-            this.sbmtBtn.Size = new System.Drawing.Size(71, 29);
+            this.sbmtBtn.Size = new System.Drawing.Size(106, 45);
             this.sbmtBtn.TabIndex = 33;
             this.sbmtBtn.Text = "Submit";
             this.sbmtBtn.UseVisualStyleBackColor = true;
@@ -370,10 +337,9 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(159, 701);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveBtn.Location = new System.Drawing.Point(238, 1078);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(71, 23);
+            this.saveBtn.Size = new System.Drawing.Size(106, 35);
             this.saveBtn.TabIndex = 34;
             this.saveBtn.Text = "Save Stats";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -381,18 +347,16 @@
             // 
             // pnameBox
             // 
-            this.pnameBox.Location = new System.Drawing.Point(37, 135);
-            this.pnameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnameBox.Location = new System.Drawing.Point(56, 208);
             this.pnameBox.Name = "pnameBox";
-            this.pnameBox.Size = new System.Drawing.Size(68, 20);
+            this.pnameBox.Size = new System.Drawing.Size(100, 26);
             this.pnameBox.TabIndex = 35;
             // 
             // schara
             // 
-            this.schara.Location = new System.Drawing.Point(413, 701);
-            this.schara.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.schara.Location = new System.Drawing.Point(620, 1078);
             this.schara.Name = "schara";
-            this.schara.Size = new System.Drawing.Size(109, 23);
+            this.schara.Size = new System.Drawing.Size(164, 35);
             this.schara.TabIndex = 36;
             this.schara.Text = "Save Character";
             this.schara.UseVisualStyleBackColor = true;
@@ -400,10 +364,10 @@
             // 
             // playercreation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(644, 690);
+            this.ClientSize = new System.Drawing.Size(966, 1162);
             this.Controls.Add(this.schara);
             this.Controls.Add(this.pnameBox);
             this.Controls.Add(this.saveBtn);
@@ -440,7 +404,6 @@
             this.Controls.Add(this.levelL);
             this.Controls.Add(this.raceLa);
             this.Controls.Add(this.pname);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "playercreation";
             this.Text = "playercreation";
             this.Load += new System.EventHandler(this.playercreation_Load);
