@@ -49,10 +49,32 @@ namespace WorldWeaver
             }
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
+
+        private void schara_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(hpBox.Text))
+            //No error for notes as they are optional
+            if (string.IsNullOrEmpty(pnameBox.Text))
+            {
+                MessageBox.Show("Please enter your name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (string.IsNullOrEmpty(raceBox.Text))
+            {
+                MessageBox.Show("Please enter your race!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (string.IsNullOrEmpty(lvlBox.Text))
+            {
+                MessageBox.Show("Please enter your level, even if it's very low!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (string.IsNullOrEmpty(clsBox.Text))
+            {
+                MessageBox.Show("Please enter your class!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            else if (string.IsNullOrEmpty(hpBox.Text))
             {
                 MessageBox.Show("You can't go in without any health points!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -108,6 +130,7 @@ namespace WorldWeaver
             }
 
 
+
             else
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
@@ -116,8 +139,15 @@ namespace WorldWeaver
                 {
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO stats (hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, proficiency_bonus, walking_speed, initiative, armor_class) VALUES (@hp, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @proficiencyBonus, @walkingSpeed, @initiative, @armorClass)", conn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO player (name, race, level, class, notes_to_dm, hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, proficiency_bonus, walking_speed, initiative, armor_class) VALUES(@playerName, @race, @level, @clas, @notes, @hp, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @proficiencyBonus, @walkingSpeed, @initiative, @armorClass)", conn))
                     {
+                        cmd.Parameters.Add("@playerName", SqlDbType.NVarChar, 255).Value = pnameBox.Text;
+                        cmd.Parameters.Add("@race", SqlDbType.NVarChar, 255).Value = raceBox.Text;
+                        cmd.Parameters.Add("@level", SqlDbType.Int).Value = lvlBox.Text;
+                        cmd.Parameters.Add("@clas", SqlDbType.NVarChar, 255).Value = clsBox.Text;
+                        cmd.Parameters.Add("@notes", SqlDbType.NVarChar, 255).Value = notesBox.Text;
+
+                        //character stats
                         cmd.Parameters.Add("@hp", SqlDbType.Int).Value = hpBox.Text;
                         cmd.Parameters.Add("@strength", SqlDbType.Int).Value = strBox.Text;
                         cmd.Parameters.Add("@dexterity", SqlDbType.Int).Value = dexBox.Text;
@@ -129,92 +159,6 @@ namespace WorldWeaver
                         cmd.Parameters.Add("@walkingSpeed", SqlDbType.Int).Value = wsBox.Text;
                         cmd.Parameters.Add("@initiative", SqlDbType.Int).Value = initBox.Text;
                         cmd.Parameters.Add("@armorClass", SqlDbType.Int).Value = acBox.Text;
-
-                        cmd.ExecuteNonQuery();
-                    }
-
-                }
-
-                //create if else for textbox and display error if empty
-
-
-                var result = MessageBox.Show("Stats Saved!");
-               
-
-            }
-        }
-
-       
-
-        private void sbmtBtn_Click(object sender, EventArgs e)
-        {
-            //Notes are optional
-
-                /*string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO player (notes_to_dm) VALUES(@notesToDM)", conn))
-                    {
-                        cmd.Parameters.Add("@notesToDM", SqlDbType.NVarChar, 255).Value = notesBox.Text;
-
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-
-                var result = MessageBox.Show("Notes/Complaints sent to your DM", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                if (result == DialogResult.OK)
-                {
-                    ClearForm();
-                }
-                else if (result == DialogResult.Cancel)
-                {
-                    ClearForm();
-                }*/
-            
-            
-        }
-
-        private void schara_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(pnameBox.Text))
-            {
-                MessageBox.Show("Please enter your name!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else if (string.IsNullOrEmpty(raceBox.Text))
-            {
-                MessageBox.Show("Please enter your race!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else if (string.IsNullOrEmpty(lvlBox.Text))
-            {
-                MessageBox.Show("Please enter your level, even if it's very low!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            else if (string.IsNullOrEmpty(clsBox.Text))
-            {
-                MessageBox.Show("Please enter your class!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-
-            else
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
-
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO player (player_name, race, level, class, notes_to_dm) VALUES(@playerName, @race, @level, @clas, @notes)", conn))
-                    {
-                        cmd.Parameters.Add("@playerName", SqlDbType.NVarChar, 255).Value = pnameBox.Text;
-                        cmd.Parameters.Add("@race", SqlDbType.NVarChar, 255).Value = raceBox.Text;
-                        cmd.Parameters.Add("@level", SqlDbType.Int).Value = lvlBox.Text;
-                        cmd.Parameters.Add("@clas", SqlDbType.NVarChar, 255).Value = clsBox.Text;
-                        cmd.Parameters.Add("@notes", SqlDbType.NVarChar, 255).Value = notesBox.Text;
 
                         cmd.ExecuteNonQuery();
                     }

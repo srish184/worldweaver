@@ -60,8 +60,6 @@
             this.initBox = new System.Windows.Forms.TextBox();
             this.acBox = new System.Windows.Forms.TextBox();
             this.notesBox = new System.Windows.Forms.TextBox();
-            this.sbmtBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.pnameBox = new System.Windows.Forms.TextBox();
             this.schara = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -350,26 +348,6 @@
             this.notesBox.Size = new System.Drawing.Size(434, 235);
             this.notesBox.TabIndex = 32;
             // 
-            // sbmtBtn
-            // 
-            this.sbmtBtn.Location = new System.Drawing.Point(632, 502);
-            this.sbmtBtn.Name = "sbmtBtn";
-            this.sbmtBtn.Size = new System.Drawing.Size(106, 45);
-            this.sbmtBtn.TabIndex = 33;
-            this.sbmtBtn.Text = "Submit";
-            this.sbmtBtn.UseVisualStyleBackColor = true;
-            this.sbmtBtn.Click += new System.EventHandler(this.sbmtBtn_Click);
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.Location = new System.Drawing.Point(238, 1078);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(106, 35);
-            this.saveBtn.TabIndex = 34;
-            this.saveBtn.Text = "Save Stats";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
             // pnameBox
             // 
             this.pnameBox.Location = new System.Drawing.Point(56, 208);
@@ -396,8 +374,6 @@
             this.ClientSize = new System.Drawing.Size(966, 1162);
             this.Controls.Add(this.schara);
             this.Controls.Add(this.pnameBox);
-            this.Controls.Add(this.saveBtn);
-            this.Controls.Add(this.sbmtBtn);
             this.Controls.Add(this.notesBox);
             this.Controls.Add(this.acBox);
             this.Controls.Add(this.initBox);
@@ -472,8 +448,6 @@
         private System.Windows.Forms.TextBox initBox;
         private System.Windows.Forms.TextBox acBox;
         private System.Windows.Forms.TextBox notesBox;
-        private System.Windows.Forms.Button sbmtBtn;
-        private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.TextBox pnameBox;
         private System.Windows.Forms.Button schara;
     }

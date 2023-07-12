@@ -18,20 +18,11 @@ CREATE TABLE maps
 table name: player
 CREATE TABLE player(
 	player_id INT IDENTITY (1,1) PRIMARY KEY,
-	player_name NVARCHAR(255),
+	name NVARCHAR(255),
 	race NVARCHAR(255),
 	level int,
 	class NVARCHAR(255),
 	notes_to_dm NVARCHAR(255),
-	stats_id INT NULL,
-	FOREIGN KEY (stats_id) REFERENCES stats(stats_id)
-	);
-
-(foreign key can be set in table designer)
-*********************************************
-table name: stats
-CREATE TABLE stats(
-	stats_id INT IDENTITY (1,1) PRIMARY KEY,
 	hit_points INT,
 	strength INT,
 	dexterity INT,
@@ -42,8 +33,7 @@ CREATE TABLE stats(
 	proficiency_bonus INT,
 	walking_speed INT,
 	initiative INT,
-	armor_class INT,
-	FOREIGN KEY (player_id) REFERENCE player(player_id)
+	armor_class INT
 	);
 
 *********************************************
