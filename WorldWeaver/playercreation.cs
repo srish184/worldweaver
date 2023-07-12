@@ -150,7 +150,7 @@ namespace WorldWeaver
         {
             //Notes are optional
 
-                string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+                /*string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -171,7 +171,7 @@ namespace WorldWeaver
                 else if (result == DialogResult.Cancel)
                 {
                     ClearForm();
-                }
+                }*/
             
             
         }
@@ -208,12 +208,13 @@ namespace WorldWeaver
                 {
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO player (player_name, race, level, class) VALUES(@playerName, @race, @level, @clas)", conn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO player (player_name, race, level, class, notes_to_dm) VALUES(@playerName, @race, @level, @clas, @notes)", conn))
                     {
                         cmd.Parameters.Add("@playerName", SqlDbType.NVarChar, 255).Value = pnameBox.Text;
                         cmd.Parameters.Add("@race", SqlDbType.NVarChar, 255).Value = raceBox.Text;
                         cmd.Parameters.Add("@level", SqlDbType.Int).Value = lvlBox.Text;
                         cmd.Parameters.Add("@clas", SqlDbType.NVarChar, 255).Value = clsBox.Text;
+                        cmd.Parameters.Add("@notes", SqlDbType.NVarChar, 255).Value = notesBox.Text;
 
                         cmd.ExecuteNonQuery();
                     }
