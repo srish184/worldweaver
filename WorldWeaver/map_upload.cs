@@ -173,8 +173,31 @@ namespace WorldWeaver
                 return;
             }
 
+            // Check if the map name already exists in the database
+            if (IsMapNameExists(txt_mapName.Text))
+            {
+                MessageBox.Show("Map name already exists. Please enter a unique map name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             lbl_mapFilePicker.Visible = true;
             btn_mapFilePicker.Visible = true;
+        }
+        private bool IsMapNameExists(string mapName)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT COUNT(*) FROM maps WHERE map_name = @mapName";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@mapName", mapName);
+
+                int count = (int)command.ExecuteScalar();
+                return count > 0;
+            }
         }
 
         private void btn_navMainMenu_Click(object sender, EventArgs e)
