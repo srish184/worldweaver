@@ -51,6 +51,10 @@ namespace WorldWeaver
             cmb_player6.Visible = false;
             btn_goBack3.Visible = false;
             btn_Submit.Visible = false;
+            img_mapPreview.Visible = false;
+
+            // Add event handler for cmbMaps SelectedIndexChanged event
+            cmbMaps.SelectedIndexChanged += cmbMaps_SelectedIndexChanged;
         }
 
         private void PopulateMapDropdown()
@@ -119,8 +123,6 @@ namespace WorldWeaver
                 cmb_player4.DataSource = playerNames.ToList();
                 cmb_player5.DataSource = playerNames.ToList();
                 cmb_player6.DataSource = playerNames.ToList();
-
-                
             }
         }
 
@@ -132,9 +134,21 @@ namespace WorldWeaver
                 return;
             }
 
-            // Hide campaign name elements
-            lbl_campaignName.Hide();
-            txt_CampaignName.Hide();
+            // Check if the campaign name already exists in the database
+            if (IsCampaignNameExists(txt_CampaignName.Text))
+            {
+                MessageBox.Show("Campaign Name already exists. Please enter a unique Campaign Name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Disable campaign name textbox
+            txt_CampaignName.Enabled = false;
+
+            // Disable and change the color of campaign name label
+            lbl_campaignName.Enabled = false;
+            lbl_campaignName.ForeColor = Color.Gray;
+
+            // Hide next button
             btn_next1.Hide();
 
             // Show map selection elements
@@ -143,6 +157,22 @@ namespace WorldWeaver
             btn_next2.Show();
             btn_goBack1.Show();
         }
+
+        private bool IsCampaignNameExists(string campaignName)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT COUNT(*) FROM campaigns WHERE campaign_name = @campaignName";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@campaignName", campaignName);
+                int count = (int)command.ExecuteScalar();
+
+                return count > 0;
+            }
+        }
+
 
         private void btn_goBack1_Click(object sender, EventArgs e)
         {
@@ -166,11 +196,20 @@ namespace WorldWeaver
                 return;
             }
 
-            // Hide map selection elements
-            lbl_map.Hide();
-            cmbMaps.Hide();
+            // Disable and change the color of map label
+            lbl_map.Enabled = false;
+            lbl_map.ForeColor = Color.Gray;
+
+            // Disable map combobox
+            cmbMaps.Enabled = false;
+
+            // Hide next button & goback button
             btn_next2.Hide();
-            btn_goBack1.Hide();
+            btn_goBack1.Hide() ;
+
+
+            // Hide map preview image
+            img_mapPreview.Hide();
 
             // Show player count elements
             lbl_playerCount.Show();
@@ -178,7 +217,6 @@ namespace WorldWeaver
             btn_next3.Show();
             btn_goBack2.Show();
         }
-
 
         private void btn_goBack2_Click(object sender, EventArgs e)
         {
@@ -193,10 +231,8 @@ namespace WorldWeaver
             cmbMaps.Show();
             btn_next2.Show();
             btn_goBack1.Show();
+            img_mapPreview.Show();
         }
-
-
-
 
         private void btn_goBack3_Click(object sender, EventArgs e)
         {
@@ -221,13 +257,16 @@ namespace WorldWeaver
             cmbPlayerCount.Show();
             btn_next3.Show();
             btn_goBack2.Show();
+
         }
 
         private void btn_next3_Click(object sender, EventArgs e)
         {
-            // Hide player count elements
-            lbl_playerCount.Hide();
-            cmbPlayerCount.Hide();
+            // Disable player count elements
+            lbl_playerCount.Enabled = false;
+            cmbPlayerCount.Enabled = false;
+
+            // Hide next button
             btn_next3.Hide();
             btn_goBack2.Hide();
 
@@ -245,6 +284,84 @@ namespace WorldWeaver
 
             btn_goBack3.Show();
             btn_Submit.Show();
+        }
+
+
+        private void cmbMaps_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Check if the selected index is 0 (placeholder option)
+            if (cmbMaps.SelectedIndex == 0)
+            {
+                // Clear the image in img_mapPreview
+                img_mapPreview.Image = null;
+                return;
+            }
+
+            // Get the selected map name
+            string selectedMapName = cmbMaps.SelectedItem.ToString();
+
+            // Get the map file path from the database based on the selected map name
+            string mapFilePath = GetMapFilePath(selectedMapName);
+
+            if (mapFilePath == null)
+            {
+                MessageBox.Show("Map file path not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Load the selected map image into the PictureBox
+            Image selectedMapImage = Image.FromFile(mapFilePath);
+            img_mapPreview.SizeMode = PictureBoxSizeMode.StretchImage;
+            img_mapPreview.Image = selectedMapImage;
+        }
+
+        private string GetMapFilePath(string mapName)
+        {
+            string filePath = null;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT map_file_path FROM maps WHERE map_name = @mapName";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@mapName", mapName);
+                object result = command.ExecuteScalar();
+
+                if (result != null)
+                {
+                    filePath = result.ToString();
+                }
+            }
+
+            return filePath;
+        }
+
+        private void btn_goBack3_Click_1(object sender, EventArgs e)
+        {
+            // Hide player selection elements
+            List<Label> playerLabels = new List<Label> { lbl_player1, lbl_player2, lbl_player3, lbl_player4, lbl_player5, lbl_player6 };
+            List<ComboBox> playerComboBoxes = new List<ComboBox> { cmb_player1, cmb_player2, cmb_player3, cmb_player4, cmb_player5, cmb_player6 };
+
+            foreach (var label in playerLabels)
+            {
+                label.Hide();
+            }
+
+            foreach (var comboBox in playerComboBoxes)
+            {
+                comboBox.Hide();
+            }
+
+            btn_goBack3.Hide();
+            btn_Submit.Hide();
+
+            // Show player count elements
+            lbl_playerCount.Show();
+            cmbPlayerCount.Show();
+            btn_next3.Show();
+            btn_goBack2.Show();
+
         }
     }
 }

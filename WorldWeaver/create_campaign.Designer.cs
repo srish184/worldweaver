@@ -290,7 +290,7 @@
             // btn_goBack1
             // 
             this.btn_goBack1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_goBack1.Location = new System.Drawing.Point(671, 72);
+            this.btn_goBack1.Location = new System.Drawing.Point(538, 126);
             this.btn_goBack1.Name = "btn_goBack1";
             this.btn_goBack1.Size = new System.Drawing.Size(106, 34);
             this.btn_goBack1.TabIndex = 23;
@@ -301,7 +301,7 @@
             // btn_goBack2
             // 
             this.btn_goBack2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_goBack2.Location = new System.Drawing.Point(533, 126);
+            this.btn_goBack2.Location = new System.Drawing.Point(437, 184);
             this.btn_goBack2.Name = "btn_goBack2";
             this.btn_goBack2.Size = new System.Drawing.Size(106, 34);
             this.btn_goBack2.TabIndex = 24;
@@ -318,10 +318,11 @@
             this.btn_goBack3.TabIndex = 25;
             this.btn_goBack3.Text = "Go Back";
             this.btn_goBack3.UseVisualStyleBackColor = true;
+            this.btn_goBack3.Click += new System.EventHandler(this.btn_goBack3_Click_1);
             // 
             // img_mapPreview
             // 
-            this.img_mapPreview.Location = new System.Drawing.Point(427, 167);
+            this.img_mapPreview.Location = new System.Drawing.Point(201, 165);
             this.img_mapPreview.Name = "img_mapPreview";
             this.img_mapPreview.Size = new System.Drawing.Size(296, 278);
             this.img_mapPreview.TabIndex = 26;
