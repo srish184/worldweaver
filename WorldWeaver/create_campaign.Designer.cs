@@ -55,6 +55,7 @@
             this.btn_goBack2 = new System.Windows.Forms.Button();
             this.btn_goBack3 = new System.Windows.Forms.Button();
             this.img_mapPreview = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.img_mapPreview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,6 +287,7 @@
             this.btn_Submit.TabIndex = 22;
             this.btn_Submit.Text = "Create Campaign";
             this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // btn_goBack1
             // 
@@ -318,21 +320,32 @@
             this.btn_goBack3.TabIndex = 25;
             this.btn_goBack3.Text = "Go Back";
             this.btn_goBack3.UseVisualStyleBackColor = true;
-            this.btn_goBack3.Click += new System.EventHandler(this.btn_goBack3_Click_1);
+            this.btn_goBack3.Click += new System.EventHandler(this.btn_goBack3_Click);
             // 
             // img_mapPreview
             // 
-            this.img_mapPreview.Location = new System.Drawing.Point(201, 165);
+            this.img_mapPreview.Location = new System.Drawing.Point(200, 165);
             this.img_mapPreview.Name = "img_mapPreview";
             this.img_mapPreview.Size = new System.Drawing.Size(296, 278);
             this.img_mapPreview.TabIndex = 26;
             this.img_mapPreview.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(31, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Main Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // create_campaign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.img_mapPreview);
             this.Controls.Add(this.btn_goBack3);
             this.Controls.Add(this.btn_goBack2);
@@ -397,5 +410,6 @@
         private System.Windows.Forms.Button btn_goBack2;
         private System.Windows.Forms.Button btn_goBack3;
         private System.Windows.Forms.PictureBox img_mapPreview;
+        private System.Windows.Forms.Button button1;
     }
 }
