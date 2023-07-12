@@ -80,22 +80,14 @@ CREATE TABLE tokens (
 table name: campaigns
 
 CREATE TABLE campaigns (
-  campaign_id INT IDENTITY(1,1) PRIMARY KEY,
+  campaign_id INT IDENTITY(1, 1) PRIMARY KEY,
   campaign_name VARCHAR(255),
-  campaign_map INT
+  campaign_map VARCHAR(255),
+  campaign_player_count INT,
+  campaign_player1 VARCHAR(255),
+  campaign_player2 VARCHAR(255),
+  campaign_player3 VARCHAR(255),
+  campaign_player4 VARCHAR(255),
+  campaign_player5 VARCHAR(255),
+  campaign_player6 VARCHAR(255)
 );
-
-*********************************************
-
-table name: campaign_players
-note: this is a many-to-many join table to link players to campaigns
-
-CREATE TABLE campaign_players (
-  campaign_player_id INT IDENTITY(1,1) PRIMARY KEY,
-  campaign_id INT,
-  player_id INT,
-  FOREIGN KEY (campaign_id) REFERENCES campaigns(campaign_id),
-  FOREIGN KEY (player_id) REFERENCES player(player_id)
-);
-
-*********************************************
