@@ -302,11 +302,17 @@ namespace WorldWeaver
         // Handle the click event of the "Next" button on the player count selection page
         private void btn_next3_Click(object sender, EventArgs e)
         {
+            // Validate the player count input
+            if (cmbPlayerCount.SelectedItem == null || !int.TryParse(cmbPlayerCount.SelectedItem.ToString(), out int playerCount) || playerCount < 1 || playerCount > 6)
+            {
+                MessageBox.Show("Please select a valid player count between 1 and 6.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             lbl_playerCount.Enabled = false;
             cmbPlayerCount.Enabled = false;
             btn_goBack2.Hide();
             btn_next3.Hide();
-            int playerCount = (int)cmbPlayerCount.SelectedItem;
             ShowPlayerSelectionElements(playerCount);
         }
 
@@ -395,7 +401,8 @@ namespace WorldWeaver
                         insertQuery += $", campaign_player{i}";
                     }
 
-                    insertQuery += ") VALUES (@campaignName, @mapName, @playerCount";
+                    insertQuery += @")
+                VALUES (@campaignName, @mapName, @playerCount";
 
                     for (int i = 1; i <= playerCount; i++)
                     {
@@ -442,6 +449,7 @@ namespace WorldWeaver
             }
         }
 
+
         // Validate the user input before submitting the form
         private bool ValidateInput()
         {
@@ -487,34 +495,34 @@ namespace WorldWeaver
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = @"
-            SELECT player_id
-            FROM (
-                SELECT player_id, ROW_NUMBER() OVER (ORDER BY player_id) AS row_num
-                FROM player
-                WHERE name = @playerName
-            ) AS player_row
-            WHERE row_num = @rowNum";
+
+                // Construct the SQL query with the appropriate number of placeholders
+                string query = $"SELECT player_id FROM player WHERE name IN ({string.Join(", ", playerNames.Select((_, i) => $"@player{i}"))})";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.Add("@playerName", SqlDbType.VarChar);
-                    command.Parameters.Add("@rowNum", SqlDbType.Int);
-
+                    // Bind the parameter values
                     for (int i = 0; i < playerNames.Count; i++)
                     {
-                        command.Parameters["@playerName"].Value = playerNames[i];
-                        command.Parameters["@rowNum"].Value = i + 1;
+                        command.Parameters.AddWithValue($"@player{i}", playerNames[i]);
+                    }
 
-                        object result = command.ExecuteScalar();
-                        int? playerId = (result != DBNull.Value) ? (int?)result : null;
-                        playerIds.Add(playerId);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Read the player IDs from the reader and add them to the list
+                        while (reader.Read())
+                        {
+                            int? playerId = reader.IsDBNull(0) ? null : (int?)reader.GetInt32(0);
+                            playerIds.Add(playerId);
+                        }
                     }
                 }
             }
 
             return playerIds;
         }
+
+
 
         // Handle the click event of the "Back" button to return to the main menu
         private void button1_Click(object sender, EventArgs e)
