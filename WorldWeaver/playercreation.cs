@@ -141,13 +141,14 @@ namespace WorldWeaver
 
                     using (SqlCommand cmd = new SqlCommand("INSERT INTO player (name, race, level, class, notes_to_dm, hit_points, strength, dexterity, constitution, intelligence, wisdom, charisma, proficiency_bonus, walking_speed, initiative, armor_class) VALUES(@playerName, @race, @level, @clas, @notes, @hp, @strength, @dexterity, @constitution, @intelligence, @wisdom, @charisma, @proficiencyBonus, @walkingSpeed, @initiative, @armorClass)", conn))
                     {
+                        //Character info
                         cmd.Parameters.Add("@playerName", SqlDbType.NVarChar, 255).Value = pnameBox.Text;
                         cmd.Parameters.Add("@race", SqlDbType.NVarChar, 255).Value = raceBox.Text;
                         cmd.Parameters.Add("@level", SqlDbType.Int).Value = lvlBox.Text;
                         cmd.Parameters.Add("@clas", SqlDbType.NVarChar, 255).Value = clsBox.Text;
                         cmd.Parameters.Add("@notes", SqlDbType.NVarChar, 255).Value = notesBox.Text;
 
-                        //character stats
+                        //Character stats
                         cmd.Parameters.Add("@hp", SqlDbType.Int).Value = hpBox.Text;
                         cmd.Parameters.Add("@strength", SqlDbType.Int).Value = strBox.Text;
                         cmd.Parameters.Add("@dexterity", SqlDbType.Int).Value = dexBox.Text;
