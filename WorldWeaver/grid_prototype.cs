@@ -34,6 +34,7 @@ namespace WorldWeaver
             cellHeight = tableLayoutPanel1.Height / tableLayoutPanel1.RowCount;
         }
 
+        //pick up token at initial position
         private void UserControl11_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -42,6 +43,7 @@ namespace WorldWeaver
             }
         }
 
+        //drag token when mouse moves
         private void UserControl11_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -56,6 +58,8 @@ namespace WorldWeaver
             }
         }
 
+
+        //snap token to nearest position on mouse up
         private void UserControl11_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
