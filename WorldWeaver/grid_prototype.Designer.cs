@@ -62,7 +62,7 @@
             // 
             this.userControl11.AutoSize = true;
             this.userControl11.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.userControl11.Location = new System.Drawing.Point(12, 208);
+            this.userControl11.Location = new System.Drawing.Point(370, 435);
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(69, 44);
             this.userControl11.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(781, 487);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "grid_prototype";
