@@ -78,3 +78,5 @@ C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.NPCFor
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.worldform.resources
 C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.create_campaign.resources
 C:\Users\Jose Aguayo-Castro\Source\Repos\worldweaver\WorldWeaver\obj\Debug\WorldWeaver.create_campaign.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.grid_prototype.resources
+C:\Users\fahmi\source\repos\WorldWeaver\WorldWeaver\obj\Debug\WorldWeaver.UserControl1.resources

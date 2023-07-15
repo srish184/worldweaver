@@ -34,6 +34,7 @@
             this.lblintro = new System.Windows.Forms.Label();
             this.btn_navToken = new System.Windows.Forms.Button();
             this.btn_createCampaign = new System.Windows.Forms.Button();
+            this.btn_navGridProto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_mapUpload
@@ -98,11 +99,22 @@
             this.btn_createCampaign.UseVisualStyleBackColor = true;
             this.btn_createCampaign.Click += new System.EventHandler(this.btn_createCampaign_Click);
             // 
+            // btn_navGridProto
+            // 
+            this.btn_navGridProto.Location = new System.Drawing.Point(335, 376);
+            this.btn_navGridProto.Name = "btn_navGridProto";
+            this.btn_navGridProto.Size = new System.Drawing.Size(131, 50);
+            this.btn_navGridProto.TabIndex = 6;
+            this.btn_navGridProto.Text = "Grid Prototype";
+            this.btn_navGridProto.UseVisualStyleBackColor = true;
+            this.btn_navGridProto.Click += new System.EventHandler(this.btn_navGridProto_Click);
+            // 
             // main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_navGridProto);
             this.Controls.Add(this.btn_createCampaign);
             this.Controls.Add(this.btn_navToken);
             this.Controls.Add(this.lblintro);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.Label lblintro;
         private System.Windows.Forms.Button btn_navToken;
         private System.Windows.Forms.Button btn_createCampaign;
+        private System.Windows.Forms.Button btn_navGridProto;
     }
 }

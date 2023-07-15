@@ -60,5 +60,12 @@ namespace WorldWeaver
             createCampaignForm.Show();
             this.Hide();
         }
+
+        private void btn_navGridProto_Click(object sender, EventArgs e)
+        {
+            grid_prototype grid_Prototype = new grid_prototype();
+            grid_Prototype.Show();
+            this.Hide();
+        }
     }
 }

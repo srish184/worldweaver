@@ -56,6 +56,18 @@
     <Compile Include="create_campaign.Designer.cs">
       <DependentUpon>create_campaign.cs</DependentUpon>
     </Compile>
+    <Compile Include="grid_prototype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="grid_prototype.Designer.cs">
+      <DependentUpon>grid_prototype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="world.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,9 @@
     <EmbeddedResource Include="create_campaign.resx">
       <DependentUpon>create_campaign.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="grid_prototype.resx">
+      <DependentUpon>grid_prototype.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NPCform.resx">
       <DependentUpon>NPCform.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +154,9 @@
     </Compile>
     <EmbeddedResource Include="upload_token.resx">
       <DependentUpon>upload_token.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="world.resx">
       <DependentUpon>world.cs</DependentUpon>
